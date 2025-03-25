@@ -1,0 +1,330 @@
+/* Estilos generales de la página */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Define el tipo de letra */
+}
+
+ body {
+    background-color: #f4f4f4; /* Color de fondo */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    flex-wrap: wrap;
+    background-image: url(../img/pexels-jeep-rojo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+/* HEADER RESPONSIVE */
+.menu {
+    width: 100%;
+    background:linear-gradient(to right,#37c8d8, #5df0b8);
+    padding: 10px 0;
+    position: relative;
+    top: 0;
+    height: 8vh;
+    left: 0;
+    z-index: 100;
+}
+header {
+    width: 100%;
+    background-color: bisque;
+    padding: 10px 0;
+    position: relative;
+    top: 0;
+    height: 8vh;
+    left: 0;
+    z-index: 100;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+  
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.logo a{
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+.logo a:hover{
+    color: #fff;
+} 
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+  
+.nav-links li {
+    margin: 0 15px;
+}
+  
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+  
+.nav-links a:hover {
+    color: #fff;
+}
+  
+/* MENÚ HAMBURGUESA */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+/* Contenedor del formulario */
+.container {
+    background: white;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 90%; /* Se ajusta al tamaño de la pantalla */
+    max-width: 500px; /* Limita el ancho máximo */
+    overflow: hidden;/*Se usa para que no se desborde el contenido*/
+    background:linear-gradient(to right,#145b63, #115072);
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50; /* Color del texto */
+}
+
+/* Estilos para etiquetas y campos de entrada */
+label {
+    font-weight: bold; /* Hace que el texto sea en negrita */
+    display: block; /* Hace que la etiqueta ocupe toda la línea */
+    margin-top: 10px;
+}
+
+input, textarea, select {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px;
+    padding-right: 0;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos del botón de envío */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #27ae60;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #0b0234;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #0b0234;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #219150;
+    color:black;
+    box-shadow: 0 0 20px #0ff, 0 0 40px #00f;
+}
+
+/* FOOTER ESTILOS */
+footer {
+    width: 100%;
+    background:linear-gradient(to right,#37c8d8, #5df0b8);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+.footer-section {
+    margin: 10px;
+}
+  
+.footer-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+  
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+  
+.footer-links li {
+    margin: 5px 0;
+}
+  
+.footer-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+  
+.footer-links a:hover {
+    color: #555;
+}
+  
+/* ICONOS DE REDES SOCIALES */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+  
+.footer-icons a {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    transition: color 0.3s ease;
+}
+  
+.footer-icons a:hover {
+    color: #555;
+}
+  
+/* MEDIA QUERY PARA DISPOSITIVOS MÓVILES */
+@media screen and (max-width: 768px) {
+    /* Ajustes del header */
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      background:linear-gradient(to right,#37c8d8, #5df0b8);
+      position: absolute;
+      top: 50px;
+      left: -100%;
+      transition: all 300ms ease-in-out;
+      z-index: -1;
+    }
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links.active {
+      left: 0;
+    }
+  
+    /* Ajustes del footer */
+    footer {
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 60px;
+    }
+  
+    .footer-section {
+      margin-bottom: 15px;
+    }
+}
+
+/* FOOTER ESTILOS */
+
+.footer-section {
+    margin: 10px;
+}
+  
+.footer-section h3 {
+    font-size: 1.2rem; /* Tamaño normal */
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+  
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+  
+.footer-links li {
+    margin: 5px 0;
+}
+  
+.footer-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+  
+.footer-links a:hover {
+    color: #555;
+}
+  
+/* ICONOS DE REDES SOCIALES */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+  
+.footer-icons a {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    transition: color 0.3s ease;
+}
+  
+.footer-icons a:hover {
+    color: #555;
+}
+  
+/* MEDIA QUERY PARA DISPOSITIVOS MÓVILES */
+@media screen and (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 60px;
+      position: relative;
+    }
+  
+    .footer-section {
+      margin-bottom: 10px;
+    }
+  
+    .footer-section h3 {
+      font-size: 1rem; /* Texto más pequeño */
+    }
+  
+    .footer-links a {
+      font-size: 0.9rem; /* Enlaces más pequeños */
+    }
+  
+    .footer-icons a {
+      font-size: 20px; /* Iconos un poco más pequeños */
+    }
+}
+  
+/* Media query para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .container {
+        width: 95%; /* Aumenta el ancho para móviles */
+    }
+    
+    input, textarea, select {
+        padding: 8px;
+    }
+}

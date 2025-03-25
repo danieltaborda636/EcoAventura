@@ -225,7 +225,7 @@ section .subtitulo{
 /* Estilos para el contenedor del carrusel */
 .carousel-container {
     position: relative; /* Permite posicionar los botones de navegación */
-    width: 105%; /* Ocupa todo el ancho disponible */
+    width: 100%; /* Ocupa todo el ancho disponible */
     overflow: hidden; /* Oculta el contenido que se desborda */
     display: flex; /* Utiliza flexbox para el diseño */
     flex-direction: column; /* Organiza los elementos en columna */
