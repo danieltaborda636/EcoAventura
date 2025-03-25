@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/inicion.css">
+    <title>Inicio ecoaventura</title>
+</head>
+
+<body>
+    <!-- HEADER CON BARRA DE NAVEGACIÓN -->
+    <!-- SECCION QUE ENVUELVE TODO EL CONTENIDO -->
+    <section class="seccionLogueo">
+        <header id="barra">
+            <div class="navbar">
+                <div class="logo"><a href="./index.html">EcoAventura</a></div>
+                <div class="menu-toggle">&#9776;</div> <!-- Ícono de menú hamburguesa -->
+                <ul class="nav-links">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="#slider-container">Planifica tu viaje</a></li>
+                    <li><a href="./Pagina_socios/index.html">Reserva</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="../Inicio y Registro/index.html">Perfil</a></li>
+                </ul>
+            </div>
+        </header>
+        <!--------------------------------------------------------------------------------------------------------------------------------------->
+        <section class="inicio">
+            <div class="textos">
+                <h1 class="titulo">EcoAventura</h1>
+                <h2 class="subtitulo">Risaralda</h2>
+                
+            </div>
+            <div class="sesgoabajo"></div>
+        </section>
+        <section class="acerca-de">
+            <div class="contenedor">
+                <h2 class="sobre-nosotros">Eco turismo</h2>
+                <h3 class="slogan">Risaralda: Conecta con la naturaleza, vive la experiencia.</h3>
+                <P class="parrafo">Adéntrate en el corazón de Colombia y descubre Risaralda, un departamento que palpita con la vitalidad de la naturaleza y 
+                    el encanto de sus paisajes. Aquí, donde la Cordillera Central se funde con el Paisaje Cultural Cafetero, te invitamos a explorar 
+                    un mundo de sensaciones. Desde los picos que acarician las nubes hasta los ríos que serpentean entre valles esmeralda, Risaralda 
+                    te ofrece un abanico de experiencias ecoturísticas que despertarán tus sentidos y nutrirán tu alma. Recorre senderos ancestrales 
+                    que te llevarán a cascadas escondidas, observa aves multicolores que danzan entre los cafetales, y sumérgete en la cultura de 
+                    comunidades que han vivido en armonía con la tierra durante generaciones. En Risaralda, el ecoturismo no es solo una actividad, 
+                    es una filosofía de vida que nos invita a conectar con la naturaleza de manera responsable y sostenible. Únete a nosotros en este 
+                    viaje de descubrimiento y sé parte de la conservación de este paraíso natural.</P>
+            </div>
+        </section>
+<!--el mapa interactivo de cada municipio-->
+     <section class="introduccion">
+        <div id="mapa_Risaralda"><img id="mapa" src="../img/Departamento-Risaralda-de-Colombia-5-600x645.jpg"></div>
+       
+     </section>
+--------------------------------------------------------------------------------------------------------------------------------------------
+<!--carrocel de algunos lugares eco -->
+<div class="carousel-container">
+    <div class="carousel-wrapper">
+        <div class="card-group">
+            <div class="card">
+                <img src="../img/termales de santa rosa.jpg" alt="termales de santa rosa">
+                <div class="layer"></div>
+                <div class="info">
+                    <h1>termales de Santa Rosa</h1>
+                    <p>Descripción de la tarjeta 2.</p>
+                    <button>ir a</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../img/cascada-del-parque ukumari.jpg" alt="parque ukumari">
+                <div class="layer"></div>
+                <div class="info">
+                    <h1>parque natural ukumari</h1>
+                    <p>Descripción de la tarjeta 2.</p>
+                    <button>ir a</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../img/santuario-de-fauna-quinballa.jpg" alt="Santuario de Fauna y Flora Otún Quimbaya ">
+                <div class="layer"></div>
+                <div class="info">
+                    <h1>Santuario de Fauna y Flora Otún Quimbaya </h1>
+                    <p>Descripción de la tarjeta 1.</p>
+                    <button>ir a</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../img/cascada frailes.jpg" alt="Cascada de los Frailes">
+                <div class="layer"></div>
+                <div class="info">
+                    <h1>Cascada de los Frailes</h1>
+                    <p>Descripción de la tarjeta 2.</p>
+                    <button>ir a</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../img/desde-el-balcon-vista.alta graciajpg.jpg" alt="Mirador de Altagracia">
+                <div class="layer"></div>
+                <div class="info">
+                    <h1>Mirador de Altagracia –</h1>
+                    <p>Descripción de la tarjeta 1.</p>
+                    <button>ir a</button>
+                </div>
+            </div>
+            <div class="card">
+                <img  src="../img/marsella-colombia.jpg" alt="Jardín Botánico de Marsella ">
+                <div class="layer"></div>
+                <div class="info">
+                    <h1>Jardín Botánico de Marsella </h1>
+                    <p>Descripción de la tarjeta 2.</p>
+                    <button>ir a</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-buttons">
+        <button class="carousel-button prev">Anterior</button>
+        <button class="carousel-button next">Siguiente</button>
+    </div>
+</div>
+<script src="main.js"></script>
+-------------------------------------------------------------------------------------------------------------------------------------------
+<!--preguntas frecuentes de los usuarios-->
+     <section class="acerca-de">
+        <div class="contenedor">
+            <h2 class="sobre-nosotros">preguntas frecuentes</h2>
+            <h3 class="slogan">¿Cómo llegar a Risaralda? </h3>
+            <P class="parrafo">El Aeropuerto Internacional Matecaña de Pereira recibe vuelos nacionales e internacionales. 
+                Desde allí, puedes alquilar un coche o tomar un autobús para explorar el departamento.</P>
+                <h3 class="slogan"> ¿Cuál es la mejor época para visitar Risaralda? </h3>
+            <P class="parrafo">Risaralda tiene un clima agradable todo el año. Sin embargo, 
+                los meses más secos (diciembre a marzo y julio a agosto) son ideales para actividades al aire libre.</P>
+                <h3 class="slogan">  ¿Qué tipo de ropa debo llevar?</h3>
+            <P class="parrafo">Ropa cómoda y ligera para el día, y algo abrigado para las noches, especialmente si visitas zonas de montaña.
+                 No olvides un impermeable y calzado adecuado para senderismo.</P>
+            <h3 class="slogan"> ¿Qué actividades ecoturísticas puedo hacer en Risaralda? </h3>
+            <P class="parrafo">Puedes disfrutar de senderismo, observación de aves, rafting, cabalgatas, visitas a fincas cafeteras, y mucho más.</P>
+            <h3 class="slogan"> ¿Necesito experiencia previa para hacer ecoturismo en Risaralda? </h3>
+            <P class="parrafo">No necesariamente. Hay actividades para todos los niveles, desde principiantes hasta expertos.</P>
+        </div>
+    </section>
+
+<!--primer carrocel de los municipios-->
+  
+        <!-- PIE DE PÁGINA -->
+        <footer>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: <a href="mailto:contacto@ecoaventura.com">contacto@ecoaventura.com</a></p>
+                
+            </div>
+
+            <div class="footer-section">
+                <h3>Información</h3>
+                <ul class="footer-links">
+                    <li><a href="./index.html ">Inicio</a></li>
+                    <li><a href="..//Pagina_socios/index.html">Lugares Asociados</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="./registroSocio/registroSocio.html">Hazte Parte de Ecoaventura Risaralda</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </section>
+    <script src="../js/inicio.js"></script>
+</body>
+
+</html>
