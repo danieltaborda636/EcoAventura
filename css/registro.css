@@ -1,0 +1,126 @@
+* {
+    padding: 0;                         /* Elimina el espacio interno de todos los elementos */
+    margin: 0;                          /* Elimina el espacio externo de todos los elementos */
+    box-sizing: border-box;            /* Hace que el padding y border no sumen al ancho/alto */
+    font-family: "Arial", sans-serif;  /* Define la fuente global para todo el sitio */
+  }
+  body {
+    overflow-x: hidden;              /* Evita que se vea scroll horizontal si algo se sale */
+    background: white;              /* Establece el fondo blanco de toda la página */
+    width: 100%;                    /* El ancho del body será del 100% de la pantalla */
+    min-height: 100vh;              /* Altura mínima del body será toda la altura visible */
+    display: flex;                  /* Activa Flexbox para organizar su contenido */
+    flex-direction: column;        /* Los hijos se colocan de arriba hacia abajo */
+    justify-content: space-between;/* Distribuye el contenido con espacio entre ellos */
+  }
+  #barra {
+    width: 100%;               /* Ocupa todo el ancho de la pantalla */
+    background: #39A900;       /* Color verde del fondo */
+    padding: 10px 0;           /* Padding superior e inferior de 10px */
+    position: relative;        /* Permite posicionar elementos hijos con 'absolute' */
+    top: 0;                    /* Lo deja en la parte superior */
+    left: 0;                   /* Lo alinea a la izquierda */
+    z-index: 100;              /* Lo pone por encima de otros elementos */
+  }
+  ul {
+    list-style-type: none;     /* Quita los puntos de las listas */
+    padding-left: 500px;       /* Empuja los elementos del menú a la derecha */
+  }
+  .navbar {
+    display: flex;             /* Usa Flexbox para organizar los hijos en una fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;       /* Centra verticalmente */
+    width: 100%;               /* Ocupa todo el ancho disponible */
+    margin: auto;              /* Centrado automático si hay espacio */
+    flex-wrap: wrap;           /* Permite que los hijos bajen a otra línea si no caben */
+  }
+  .logo-container {
+    display: flex;             /* Organiza el logo e ícono en fila */
+    align-items: center;       /* Centra verticalmente los elementos */
+    gap: 10px;                 /* Espacio entre el logo, la línea y el nombre */
+  }
+  .sena {
+    width: 40px;               /* Tamaño del logo del SENA */
+  }
+  .separator {
+    height: 30px;              /* Altura de la línea vertical */
+    width: 2px;                /* Grosor de la línea */
+    background-color: black;   /* Color negro para la línea */
+    margin: 0 10px;            /* Espacio a los lados de la línea */
+  }
+  .logo-text {
+    font-size: 1.5rem;         /* Tamaño del texto EcoAventura */
+    font-weight: bold;         /* Texto en negrita */
+    color: black;              /* Color negro */
+    text-decoration: none;     /* Quita el subrayado del link */
+  }
+  .logo-text:hover {
+    color: #ffffff;            /* Cambia el color al pasar el mouse por encima */
+  }
+  .menu-toggle {
+    position: absolute;        /* Se posiciona de forma independiente dentro del contenedor */
+    top: 45%;                  /* Lo sube un poco para centrarlo verticalmente */
+    right: 20px;               /* Lo pega a la derecha */
+    transform: translateY(-50%); /* Lo centra verticalmente mejor aún */
+    z-index: 999;              /* Lo pone por encima del resto de la nav */
+    display: none;             /* Oculto por defecto, solo aparece en responsive */
+  }
+  .nav-links {
+    display: flex;             /* Menú horizontal */
+    align-items: center;       /* Centra verticalmente */
+    list-style: none;          /* Quita los puntos de lista */
+  }
+  .nav-center {
+    display: flex;             
+    justify-content: flex-start; /* Alinea todo a la izquierda */
+    align-items: center;       
+    flex: 1;                   /* Toma todo el espacio posible */
+    gap: 20px;                 /* Espacio entre elementos */
+  }
+  .dropdown {
+    margin-left: auto;         /* Empuja el perfil totalmente a la derecha */
+    position: relative;        /* Necesario para posicionar el contenido */
+  }
+  .nav-links li a {
+    text-decoration: none;     /* Sin subrayado */
+    color: black;              /* Texto negro */
+    font-weight: 500;          /* Peso medio del texto */
+    transition: color 0.3s ease; /* Animación suave al cambiar color */
+    padding: 10px 15px;        /* Espaciado interno del enlace */
+    display: block;            /* Se comporta como bloque para captar bien el clic */
+  }
+  .nav-links li a:hover {
+    color: white;              /* Al pasar el mouse cambia a blanco */
+  }
+  .lupa {
+    font-size: 20px;           /* Tamaño del ícono de lupa */
+    cursor: pointer;           /* Cambia el mouse a manito */
+    margin-right: 40px;        /* Aleja del perfil */
+  }
+  .bi-person-circle {
+    font-size: 35px;           /* Tamaño del ícono de perfil */
+    cursor: pointer;           /* Manito al pasar el mouse */
+    margin-right: 10px;        /* Un poco de espacio derecho */
+  }
+  .dropdown-content {
+    position: absolute;        /* Posiciona debajo del ícono */
+    top: 100%;                 /* Lo pone justo abajo del ícono */
+    right: 0;                  /* Pegado al borde derecho */
+    background-color: #39A900;/* Mismo verde del navbar */
+    min-width: 160px;          /* Ancho mínimo del menú desplegable */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Sombra para destacar */
+    z-index: 1;                /* Aparece sobre otros elementos */
+    display: none;             /* Oculto por defecto */
+    flex-direction: column;   /* Vertical */
+  }
+  .dropdown-content a {
+    color: black;              /* Texto negro */
+    padding: 12px 16px;        /* Espaciado interno */
+    text-decoration: none;     /* Quita subrayado */
+    display: block;            /* Toda el área clickeable */
+  }
+  .dropdown:hover .dropdown-content {
+    display: flex;             /* Al pasar el mouse muestra el menú */
+  }
+
+/*-----------------------------------------Footer----------------------------------------------------*/
