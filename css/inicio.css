@@ -17,7 +17,7 @@ body {
   width: 100%;               /* Ocupa todo el ancho de la pantalla */
   background: #39A900;       /* Color verde del fondo */
   padding: 10px 0;           /* Padding superior e inferior de 10px */
-  position: sticky;        /* Permite posicionar elementos hijos con 'absolute' */
+  position: fixed;        /* Permite posicionar elementos hijos con 'absolute' */
   top: 0;                    /* Lo deja en la parte superior */
   left: 0;                   /* Lo alinea a la izquierda */
   z-index: 100;              /* Lo pone por encima de otros elementos */
@@ -231,7 +231,7 @@ section .subtitulo {
   height: 100%;
   margin: 30px;
   border-radius: 20px;
-  z-index: 999;
+  z-index: 0;
 }
 /* Estilos para el título "Sobre Nosotros" */
 .sobre-nosotros {
