@@ -6,7 +6,7 @@
 }
 body {
   overflow-x: hidden;              /* Evita que se vea scroll horizontal si algo se sale */
-  background: rgb(255, 255, 255);              /* Establece el fondo blanco de toda la página */
+  background: #e9f5e3;              /* Establece el fondo blanco de toda la página */
   width: 100%;                    /* El ancho del body será del 100% de la pantalla */
   min-height: 100vh;              /* Altura mínima del body será toda la altura visible */
   display: flex;                  /* Activa Flexbox para organizar su contenido */
@@ -213,7 +213,7 @@ section .subtitulo {
  
   position: relative; /* Necesario para limitar el área */
   overflow: hidden;   /* Oculta hojas que se salgan */
-  background-color: rgb(255, 255, 255);
+  background-color: #e9f5e3;
   height: 700px; /* Altura de la sección */
   display: flex; /* Usamos flexbox para centrar los elementos */
   flex-direction: column; /* Los elementos se alinean de arriba a abajo */
@@ -488,10 +488,15 @@ button {
   border-radius: 5px;
   cursor: pointer;
   align-items: center;
+  text-decoration: none; 
 }
 
 button:hover {
   background-color: #0d29c9;
+}
+.Informacion{
+  text-decoration: none; 
+  color: #fff;
 }
 
 
@@ -530,7 +535,7 @@ footer {
 }
 
 .footer-icons a:hover {
-  color:  #39A900;                     /* Color verde al pasar el cursor */
+  color:  #ffffff;                     /* Color verde al pasar el cursor */
 }
 
 .ecoaventura {
