@@ -10,28 +10,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/inicio.css">
     <title>Inicio ecoaventura</title>
 </head>
 
 <body>
     <!-- HEADER CON BARRA DE NAVEGACIÓN -->
-    <!-- SECCION QUE ENVUELVE TODO EL CONTENIDO -->
+    
+    <!-- HEADER CON BARRA DE NAVEGACIÓN -->
+    
     <section class="seccionLogueo">
         <header id="barra">
             <div class="navbar">
-                <div class="logo"><a href="./index.html">EcoAventura</a></div>
+                <div class="logo-container">
+                    <img class="sena" src="../img/Logo SENA.svg">
+                
+                    <div class="separator"></div>
+                
+                    <a class="logo-text" href="./index.html">EcoAventura</a>
+                </div>
+                
                 <div class="menu-toggle">&#9776;</div> <!-- Ícono de menú hamburguesa -->
                 <ul class="nav-links">
-                    <li><a href="./index.html">Inicio</a></li>
-                    <li><a href="#slider-container">Planifica tu viaje</a></li>
-                    <li><a href="./Pagina_socios/index.html">Reserva</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                    <li><a href="../Inicio y Registro/index.html">Perfil</a></li>
-                </ul>
+                    <div class="nav-center">
+                      <li class="menu"><a href="./index.html">Inicio</a></li>
+                      <li class="menu"><a href="#slider-container">Planifica tu viaje</a></li>
+                      <i class="lupa bi-search"></i>
+                    </div>
+                    
+                    <!-- Este queda a la derecha -->
+                    <li class="dropdown">
+                      <i class="bi bi-person-circle dropbtn"></i>
+                      <div class="dropdown-content">
+                        <a href="#">ID</a>
+                        <a href="#">Seguridad</a>
+                        <a href="#">Mis Favoritos</a>
+                      </div>
+                    </li>
+                  </ul>
+                  
             </div>
         </header>
-        <!--------------------------------------------------------------------------------------------------------------------------------------->
+    </section>
+        
+<!-- parte inicial de la pagina en el cual lleva un video de presentacion-->    
         <section class="inicio">
             <div class="textos">
                 <h1 class="titulo">EcoAventura</h1>
@@ -40,81 +63,99 @@
             </div>
             <div class="sesgoabajo"></div>
         </section>
-        <section class="acerca-de">
-            <div class="contenedor">
-                <h2 class="sobre-nosotros">Eco turismo</h2>
-                <h3 class="slogan">Risaralda: Conecta con la naturaleza, vive la experiencia.</h3>
-                <P class="parrafo">Adéntrate en el corazón de Colombia y descubre Risaralda, un departamento que palpita con la vitalidad de la naturaleza y 
-                    el encanto de sus paisajes. Aquí, donde la Cordillera Central se funde con el Paisaje Cultural Cafetero, te invitamos a explorar 
-                    un mundo de sensaciones. Desde los picos que acarician las nubes hasta los ríos que serpentean entre valles esmeralda, Risaralda 
-                    te ofrece un abanico de experiencias ecoturísticas que despertarán tus sentidos y nutrirán tu alma. Recorre senderos ancestrales 
-                    que te llevarán a cascadas escondidas, observa aves multicolores que danzan entre los cafetales, y sumérgete en la cultura de 
-                    comunidades que han vivido en armonía con la tierra durante generaciones. En Risaralda, el ecoturismo no es solo una actividad, 
-                    es una filosofía de vida que nos invita a conectar con la naturaleza de manera responsable y sostenible. Únete a nosotros en este 
-                    viaje de descubrimiento y sé parte de la conservación de este paraíso natural.</P>
-            </div>
-        </section>
+
+<!--segunda parte donde damos una pequeña introduccion al EcoTurismo-->
+
+    <section class="acerca-de">
+        <div class="contenedor-hojas"></div>
+
+        <div class="contenedor">
+            <h2 class="sobre-nosotros">Eco turismo</h2>
+            <h3 class="slogan">Risaralda: Conecta con la naturaleza, vive la experiencia.</h3>
+            <P class="parrafo">Adéntrate en el corazón de Colombia y descubre Risaralda, un departamento que palpita con la vitalidad de la naturaleza y 
+                el encanto de sus paisajes. Aquí, donde la Cordillera Central se funde con el Paisaje Cultural Cafetero, te invitamos a explorar 
+                un mundo de sensaciones. Desde los picos que acarician las nubes hasta los ríos que serpentean entre valles esmeralda, Risaralda 
+                te ofrece un abanico de experiencias ecoturísticas que despertarán tus sentidos y nutrirán tu alma. Recorre senderos ancestrales 
+                que te llevarán a cascadas escondidas, observa aves multicolores que danzan entre los cafetales, y sumérgete en la cultura de 
+                comunidades que han vivido en armonía con la tierra durante generaciones. En Risaralda, el ecoturismo no es solo una actividad, 
+                es una filosofía de vida que nos invita a conectar con la naturaleza de manera responsable y sostenible. Únete a nosotros en este 
+                viaje de descubrimiento y sé parte de la conservación de este paraíso natural.
+            </P>
+        </div>
+    </section>
+
+
+
 <!--el mapa interactivo de cada municipio-->
      <section class="introduccion">
         <div id="mapa_Risaralda"><img id="mapa" src="../img/Departamento-Risaralda-de-Colombia-5-600x645.jpg"></div>
        
      </section>
---------------------------------------------------------------------------------------------------------------------------------------------
+
 <!--carrocel de algunos lugares eco -->
+<h1 class="titulo_lugares">LUGARES</h1>
 <div class="carousel-container">
     <div class="carousel-wrapper">
         <div class="card-group">
             <div class="card">
-                <img src="../img/termales de santa rosa.jpg" alt="termales de santa rosa">
+                <img src="../img/Bioparque Bonita Farm.jpeg" alt="Bioparque Bonita Farm">
                 <div class="layer"></div>
                 <div class="info">
-                    <h1>termales de Santa Rosa</h1>
-                    <p>Descripción de la tarjeta 2.</p>
+                    <h1>Bioparque Bonita Farm</h1>
+                    <p>Bioparque Bonita Farm es un espacio dedicado a la conservación y la educación ambiental, donde el contacto con animales rescatados y la exploración de senderos naturales brindan una experiencia única. Ideal para toda la familia,
+                         este lugar invita a reflexionar sobre el cuidado del medio ambiente mientras se disfruta de la biodiversidad de Risaralda.</p>
+                    <button>ir a</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../img/Finca Camino Del Café.jpeg" alt="Finca Camino Del Café">
+                <div class="layer"></div>
+                <div class="info">
+                    <h1>Finca Camino Del Café</h1>
+                    <p>Desde hospedajes meticulosamente diseñados, amplios recorridos del proceso de cultivo y preparación del café en nuestra finca cafetera, experiencias gastronómicas y de entretenimiento,
+                         hasta escenarios equipados de forma extraordinaria para celebrar momentos especiales o eventos empresariales.</p>
                     <button>ir a</button>
                 </div>
             </div>
             <div class="card">
-                <img src="../img/cascada-del-parque ukumari.jpg" alt="parque ukumari">
+                <img src="../img/Vereda San Rafael, Santuario, Risaralda.jpeg" alt="Vereda San Rafael, Santuario, Risaralda ">
                 <div class="layer"></div>
                 <div class="info">
-                    <h1>parque natural ukumari</h1>
-                    <p>Descripción de la tarjeta 2.</p>
+                    <h1>Vereda San Rafael, Santuario, Risaralda </h1>
+                    <p>Es una zona rural conocida por su belleza natural, rodeada de montañas, paisajes verdes y una rica vegetación. La vereda está caracterizada por su clima templado y su entorno tranquilo, ideal para quienes buscan contacto con la naturaleza.
+                        En San Rafael, los habitantes se dedican principalmente a actividades agrícolas, como el cultivo de café, plátano y otros productos típicos de la región. La vereda es un destino de ecoturismo, con senderos y paisajes que invitan a realizar caminatas y explorar su entorno.
+                         La comunidad es acogedora, y la vida en la vereda es calmada y en armonía con la naturaleza circundante.</p>
                     <button>ir a</button>
                 </div>
             </div>
             <div class="card">
-                <img src="../img/santuario-de-fauna-quinballa.jpg" alt="Santuario de Fauna y Flora Otún Quimbaya ">
+                <img src="../img/DMI Agualinda Parque natural.jpg" alt="DMI Agualinda Parque natural">
                 <div class="layer"></div>
                 <div class="info">
-                    <h1>Santuario de Fauna y Flora Otún Quimbaya </h1>
-                    <p>Descripción de la tarjeta 1.</p>
+                    <h1>DMI Agualinda Parque natural</h1>
+                    <p>DEste parque natural se caracteriza por su biodiversidad y su importancia ecológica, ya que alberga una gran variedad de especies de flora y fauna, muchas de ellas endémicas o en peligro de extinción. Su principal objetivo es la conservación de los recursos naturales, especialmente las fuentes hídricas que nutren la región, y la promoción de prácticas de desarrollo sostenible. Además, es un importante refugio para el turismo ecológico, ofreciendo a los visitantes la posibilidad de disfrutar de paisajes naturales,
+                         realizar senderismo y conocer más sobre la flora y fauna locales.</p>
                     <button>ir a</button>
                 </div>
             </div>
             <div class="card">
-                <img src="../img/cascada frailes.jpg" alt="Cascada de los Frailes">
+                <img src="../img/Parque Natural Regional Rionegro.jpg" alt="Parque Natural Regional Rionegro">
                 <div class="layer"></div>
                 <div class="info">
-                    <h1>Cascada de los Frailes</h1>
-                    <p>Descripción de la tarjeta 2.</p>
+                    <h1>Parque Natural Regional Rionegro</h1>
+                    <p>Rionegro fue declarado como área protegida mediante el Acuerdo No 020 de junio 17 de 2011 por el Consejo Directivo de la CARDER, en la categoría de Parque Natural Regional, con una extensión de 413 hectáreas.
+                         Está ubicado en la vertiente oriental de la cordillera occidental dentro de un rango altitudinal de 1600  2000 msnm.</p>
                     <button>ir a</button>
                 </div>
             </div>
             <div class="card">
-                <img src="../img/desde-el-balcon-vista.alta graciajpg.jpg" alt="Mirador de Altagracia">
+                <img  src="../img/Cascada Curva de la Virgen.jpg" alt="Cascada Curva de la Virgen">
                 <div class="layer"></div>
                 <div class="info">
-                    <h1>Mirador de Altagracia –</h1>
-                    <p>Descripción de la tarjeta 1.</p>
-                    <button>ir a</button>
-                </div>
-            </div>
-            <div class="card">
-                <img  src="../img/marsella-colombia.jpg" alt="Jardín Botánico de Marsella ">
-                <div class="layer"></div>
-                <div class="info">
-                    <h1>Jardín Botánico de Marsella </h1>
-                    <p>Descripción de la tarjeta 2.</p>
+                    <h1>Cascada Curva de la Virgen</h1>
+                    <p>La Cascada de la Virgen es una hermosa caída de agua natural que se encuentra en un entorno rodeado de vegetación exuberante y paisajes montañosos. Sus aguas cristalinas descienden desde una altura considerable, formando un espectáculo impresionante que combina el sonido relajante del agua con la frescura del ambiente. Este lugar suele ser un atractivo turístico popular para quienes buscan conectar con la naturaleza,
+                         hacer senderismo o simplemente disfrutar de un paisaje tranquilo y refrescante.</p>
                     <button>ir a</button>
                 </div>
             </div>
@@ -125,60 +166,232 @@
         <button class="carousel-button next">Siguiente</button>
     </div>
 </div>
-<script src="main.js"></script>
--------------------------------------------------------------------------------------------------------------------------------------------
-<!--preguntas frecuentes de los usuarios-->
-     <section class="acerca-de">
-        <div class="contenedor">
-            <h2 class="sobre-nosotros">preguntas frecuentes</h2>
-            <h3 class="slogan">¿Cómo llegar a Risaralda? </h3>
-            <P class="parrafo">El Aeropuerto Internacional Matecaña de Pereira recibe vuelos nacionales e internacionales. 
-                Desde allí, puedes alquilar un coche o tomar un autobús para explorar el departamento.</P>
-                <h3 class="slogan"> ¿Cuál es la mejor época para visitar Risaralda? </h3>
-            <P class="parrafo">Risaralda tiene un clima agradable todo el año. Sin embargo, 
-                los meses más secos (diciembre a marzo y julio a agosto) son ideales para actividades al aire libre.</P>
-                <h3 class="slogan">  ¿Qué tipo de ropa debo llevar?</h3>
-            <P class="parrafo">Ropa cómoda y ligera para el día, y algo abrigado para las noches, especialmente si visitas zonas de montaña.
-                 No olvides un impermeable y calzado adecuado para senderismo.</P>
-            <h3 class="slogan"> ¿Qué actividades ecoturísticas puedo hacer en Risaralda? </h3>
-            <P class="parrafo">Puedes disfrutar de senderismo, observación de aves, rafting, cabalgatas, visitas a fincas cafeteras, y mucho más.</P>
-            <h3 class="slogan"> ¿Necesito experiencia previa para hacer ecoturismo en Risaralda? </h3>
-            <P class="parrafo">No necesariamente. Hay actividades para todos los niveles, desde principiantes hasta expertos.</P>
+
+<!--card de los municipios-->
+<h1 class="titulo_municipio">MUNICIPIOS</h1>
+<div class="card-container">
+    
+    <div class="cards">
+        <img src="../img/m_Pereira.png" alt="Pereira">
+        <div class="infos">
+            <h1>Pereira</h1>
+            <a>La Perla del Otún, corazón del Eje Cafetero. Entre montañas y cafetales, combina modernidad, cultura y naturaleza. ¡Descúbrela! </a>
+            <div class="btn-container">
+                <button><a class="Informacion" href="../html/m_pereira.html">Informacion</a></button>
+            </div>
         </div>
-    </section>
+    </div>
 
-<!--primer carrocel de los municipios-->
+    <div class="cards">
+        <img src="../img/m_santaRosa.png" alt="Santa Rosa de Cabal">
+        <div class="infos">
+            <h1>Santa Rosa de Cabal</h1>
+            <a>Aguas termales, montañas y el mejor chorizo de Colombia. Un rincón donde la naturaleza y el descanso se encuentran. ¡Ven y vívelo! </a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cards">
+        <img src="../img/municipio_marcella.JPG" alt="Marsella">
+        <div class="infos">
+            <h1>Marsella</h1>
+            <a> Un pueblo vibrante con calles coloridas y una joya oculta: el Jardín Botánico Alejandro Humboldt. Cultura, café y tradición en cada rincón. ¡Déjate sorprender! </a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <img src="../img/m_santuario.png" alt="Santuario">
+        <div class="infos">
+            <h1>Santuario</h1>
+            <a> Naturaleza pura y hogar del Santuario de Fauna y Flora Otún Quimbaya. Un destino ideal para el ecoturismo y la aventura. ¡Descúbrelo! </a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <img src="../img/municipio_Apía.jpg" alt="Apía">
+        <div class="infos">
+            <h1>Apía</h1>
+            <a> Balcones coloridos, café de altura y el mejor mirador del Tatamá. Un pueblo con alma musical y paisajes que quitan el aliento. ¡Vívelo! </a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <img src="../img/belen-de-umbria.jpg" alt="Belén de Umbría">
+        <div class="infos">
+            <h1>Belén de Umbría</h1>
+            <a>Tierra de café y neblina, con paisajes de postal y una tradición cafetera que enamora. Un rincón mágico del Eje Cafetero. ¡Descúbrelo! </a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <img src="../img/dosquebradas.jpg" alt="Dosquebradas">
+        <div class="infos">
+            <h1>Dosquebradas</h1>
+            <a>La ciudad industrial de Risaralda, un cruce entre modernidad y naturaleza. Rodeada de montañas y cascadas, es el epicentro del crecimiento económico del departamento. ¡Ven a conocerla! </a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <img src="../img/m_guatica.png" alt="Guática">
+        <div class="infos">
+            <h1>Guática</h1>
+            <a>Un rincón escondido entre montañas, con cafetales interminables y aguas termales naturales. Un paraíso por descubrir en el corazón de Risaralda. ¡Atrévete a explorarlo! </a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <img src="../img/m_laCelia.png" alt="La celia">
+        <div class="infos">
+            <h1>La Celia</h1>
+            <a>Un paraíso entre montañas, donde el aroma del café y la frescura de la naturaleza se combinan con la calidez de su gente.
+                 Un destino lleno de encanto y tranquilidad. ¡Ven y vívelo!</a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <img src="../img/municipio-la virginia.jpeg" alt="La Virginia">
+        <div class="infos">
+            <h1>La Virginia</h1>
+            <a>La “Perla de Risaralda”, un puerto de historia y tradición a orillas del majestuoso río Cauca.
+                 Su energía vibrante y paisajes únicos te esperan. ¡Descúbrelo!</a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <img src="../img/m_balboa.png" alt="Balboa">
+        <div class="infos">
+            <h1>Balboa</h1>
+            <a>Balboa, el "Balcón del Paisaje", ofrece vistas espectaculares,
+                 aire puro y la calidez de un pueblo cafetero que enamora con su tranquilidad y naturaleza.</a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <img src="../img/m_mistrato.png" alt="Mistrato">
+        <div class="infos">
+            <h1>Mistrato</h1>
+            <a> Un paraíso entre montañas, ríos cristalinos y bosques exuberantes. Hogar de la comunidad Emberá,
+                 donde la cultura indígena y la naturaleza crean un destino único para el ecoturismo. ¡Descúbrelo!</a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <img src="../img/m_puebloRico.png" alt="Pueblo Rico">
+        <div class="infos">
+            <h1>Pueblo Rico</h1>
+            <a> Un tesoro multicultural entre montañas y selvas, donde conviven comunidades indígenas,
+                 afrodescendientes y mestizas en armonía con la naturaleza. ¡Explóralo!</a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <img src="../img/m_quinchia.png" alt="Quinchia">
+        <div class="infos">
+            <h1>Quinchia</h1>
+            <a> La “Villa de los Cerros” es un municipio de tradición minera y cafetera, rodeado de imponentes montañas y sitios sagrados indígenas.
+                 Su historia,cultura y paisajes lo hacen único. ¡Ven a conocerlo!</a>
+            <div class="btn-container">
+                <button>Informacion</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
   
-        <!-- PIE DE PÁGINA -->
-        <footer>
-            <div class="footer-section">
-                <h3>Redes Sociales</h3>
-                <div class="footer-icons">
-                    <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
-                    <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
-                </div>
+      <!--inicio del footer-->
+    <footer>
+        <div class="footer-section">
+            <h3 id="arreglando">Redes Sociales</h3>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
             </div>
+        </div>
 
-            <div class="footer-section">
-                <h3>Contacto</h3>
-                <p>Email: <a href="mailto:contacto@ecoaventura.com">contacto@ecoaventura.com</a></p>
-                
-            </div>
+        <div class="footer-section">
+            <img class="ecoaventura" src="../img/logo del proyecto.png" alt="logo de EcoAventura">
+        </div>
 
-            <div class="footer-section">
-                <h3>Información</h3>
-                <ul class="footer-links">
-                    <li><a href="./index.html ">Inicio</a></li>
-                    <li><a href="..//Pagina_socios/index.html">Lugares Asociados</a></li>
-                    <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="./registroSocio/registroSocio.html">Hazte Parte de Ecoaventura Risaralda</a></li>
-                </ul>
-            </div>
-        </footer>
+        <div class="footer-section">
+            <ul class="footer-links">
+                <li><a href="./index.html ">Inicio</a></li>
+                <li><a href="./preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+                <li><a href="./registroSocio.html">Haz parte de nosotros</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="./terminosycondiciones.html">Terminos y condiciones </a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        // Menú hamburguesa toggle
+        const toggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+      
+        toggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      
+        // Dropdown perfil toggle (móviles)
+        const profileIcon = document.getElementById('profileIcon');
+        const profileDropdown = document.getElementById('profileDropdown');
+      
+        profileIcon.addEventListener('click', (e) => {
+          e.stopPropagation(); // Evita que se cierre al hacer clic
+          profileDropdown.classList.toggle('show-dropdown');
+        });
+      
+        // Cierra dropdown si se hace clic fuera
+        document.addEventListener('click', (e) => {
+          if (!profileDropdown.contains(e.target) && !profileIcon.contains(e.target)) {
+            profileDropdown.classList.remove('show-dropdown');
+          }
+        });
+      </script>
 
-    </section>
-    <script src="../js/inicio.js"></script>
+      <!-- scripts -->
+
+
+<!-- stats.js -->
+<script src="../js/lib/stats.js"></script>
+
+
+<script src="../js/inicio.js"></script>
 </body>
-
 </html>

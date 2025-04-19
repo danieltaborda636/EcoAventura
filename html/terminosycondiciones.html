@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Términos y Condiciones | EcoAventura</title>
+  <link rel="stylesheet" href="../css/terminoycondiciones.css">
+</head>
+<body>
+    <section class="seccionLogueo">
+        <header id="barra">
+            <div class="navbar">
+                <div class="logo-container">
+                    <img class="sena" src="../img/Logo SENA.svg">
+                
+                    <div class="separator"></div>
+                
+                    <a class="logo-text" href="./index.html">EcoAventura</a>
+                </div>
+                
+                <div class="menu-toggle">&#9776;</div> <!-- Ícono de menú hamburguesa -->
+                <ul class="nav-links">
+                    <div class="nav-center">
+                      <li class="menu"><a href="../html/inicio.html">Inicio</a></li>
+                      <li class="menu"><a href="#">Planifica tu viaje</a></li>
+                      <i class="lupa bi-search"></i>
+                    </div>
+                    
+                    <!-- Este queda a la derecha -->
+                    <li class="dropdown">
+                      <i class="bi bi-person-circle dropbtn"></i>
+                      <div class="dropdown-content">
+                        <a href="#">ID</a>
+                        <a href="#">Seguridad</a>
+                        <a href="#">Mis Favoritos</a>
+                      </div>
+                    </li>
+                  </ul>
+                  
+            </div>
+        </header>
+    </section>
+
+
+  <main class="terminos-container">
+    <h1>Términos y Condiciones</h1>
+    <p class="fecha-actualizacion">Última actualización: Abril 2025</p>
+
+    <section>
+      <h2>1. Aceptación de los términos</h2>
+      <p>El acceso y uso de EcoAventura implica la aceptación plena y sin reservas de estos Términos y Condiciones. Si no estás de acuerdo con alguna parte, te pedimos no utilizar el sitio.</p>
+    </section>
+
+    <section>
+      <h2>2. Propiedad intelectual</h2>
+      <p>Todos los contenidos de EcoAventura (textos, imágenes, gráficos, logotipos, videos, etc.) son propiedad de sus respectivos autores y están protegidos por las leyes de derechos de autor.</p>
+    </section>
+
+    <section>
+      <h2>3. Uso del sitio</h2>
+      <p>El sitio tiene como propósito informar y promover el ecoturismo en Risaralda. No se permite el uso del sitio para fines ilegales, comerciales no autorizados o que perjudiquen la experiencia de otros usuarios.</p>
+    </section>
+
+    <section>
+      <h2>4. Contenido de terceros</h2>
+      <p>Este sitio puede contener enlaces a otros sitios web o contenido incrustado. EcoAventura no se hace responsable por el contenido ni por las políticas de privacidad de dichos sitios.</p>
+    </section>
+
+    <section>
+      <h2>5. Imágenes y material audiovisual</h2>
+      <p>Las imágenes utilizadas en EcoAventura provienen de bancos gratuitos o autores autorizados. Si eres propietario de alguna imagen y deseas que se retire o acredite, contáctanos.</p>
+    </section>
+
+    <section>
+      <h2>6. Política de privacidad</h2>
+      <p>No recopilamos datos personales sensibles sin tu consentimiento. Toda información enviada será tratada de forma confidencial.</p>
+    </section>
+
+    <section>
+      <h2>7. Limitación de responsabilidad</h2>
+      <p>EcoAventura no se responsabiliza por errores u omisiones en los contenidos, ni por posibles daños derivados del uso de la información publicada.</p>
+    </section>
+
+    <section>
+      <h2>8. Cambios en los términos</h2>
+      <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Te recomendamos revisarlos periódicamente.</p>
+    </section>
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-section">
+        <h3 id="arreglando">Redes Sociales</h3>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <img class="ecoaventura" src="../img/logo del proyecto.png" alt="logo de EcoAventura">
+    </div>
+
+    <div class="footer-section">
+        <ul class="footer-links">
+            <li><a href="./index.html ">Inicio</a></li>
+            <li><a href="./preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+            <li><a href="./registroSocio.html">Haz parte de nosotros</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Terminos y condiciones </a></li>
+        </ul>
+    </div>
+</footer>
+<script>
+    // Menú hamburguesa toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+  
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  
+    // Dropdown perfil toggle (móviles)
+    const profileIcon = document.getElementById('profileIcon');
+    const profileDropdown = document.getElementById('profileDropdown');
+  
+    profileIcon.addEventListener('click', (e) => {
+      e.stopPropagation(); // Evita que se cierre al hacer clic
+      profileDropdown.classList.toggle('show-dropdown');
+    });
+  
+    // Cierra dropdown si se hace clic fuera
+    document.addEventListener('click', (e) => {
+      if (!profileDropdown.contains(e.target) && !profileIcon.contains(e.target)) {
+        profileDropdown.classList.remove('show-dropdown');
+      }
+    });
+  </script>
+
+  <!-- scripts -->
+
+
+<!-- stats.js -->
+<script src="../js/lib/stats.js"></script>
+
+
+<script src="../js/inicio.js"></script>
+</body>
+</html>
