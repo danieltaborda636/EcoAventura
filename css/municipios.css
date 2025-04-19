@@ -14,7 +14,7 @@ body {
 /* HEADER RESPONSIVE */
 .menu {
     width: 100%;
-    background:linear-gradient(to right,#37c8d8, #5df0b8) ;
+    background:#A3C9A8;
     padding: 10px 0;
     position: relative;
     top: 0;
@@ -36,7 +36,7 @@ body {
 }
 .logo a{
     text-decoration: none;
-    color: #000;
+    color: #1e5631;
     transition: color 0.3s ease;
 }
 .logo a:hover{
@@ -54,7 +54,7 @@ body {
   
 .nav-links a {
     text-decoration: none;
-    color: black;
+    color: #1e5631;
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -80,7 +80,7 @@ body {
     overflow: hidden;
     color: #ffffff;
     text-align: center;
-    align-content: center;
+    align-content: end;
     justify-content: center;
     background-color: #555;
     
@@ -136,8 +136,12 @@ body {
 .introduccion{
     width: 100%;
     height: auto;
+    margin-bottom: 1rem;
     text-align: center;
     text-shadow: 0 0 10px #000;
+}
+.introduccion h1{
+    font-size: 7rem;
 }
 
 /*Sección de lugares*/
@@ -161,6 +165,7 @@ body {
     background: #D9D9D9;
     flex-wrap: wrap;
     position: relative;
+    align-items: center;
 }
 .titulo{
     width: 100%;
@@ -321,6 +326,10 @@ footer {
 @media screen and (max-width: 1024px) {
     .info{
         width: 50%;
+        
+    }
+    .buttons{
+        margin-top: 0;
     }
 }
 /* 🌐 NUEVO RESPONSIVE MEJORADO PARA MÓVILES */
@@ -366,7 +375,7 @@ footer {
       flex-wrap: wrap;
       width: 100%;
       padding: 0 10px;
-      gap: 10px;
+      gap: 8px;
       margin-top: 0;
     }
   
