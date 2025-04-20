@@ -4,75 +4,132 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #f1f1f1;
-    font-family: Arial, sans-serif;
+    overflow-x: hidden;              /* Evita que se vea scroll horizontal si algo se sale */
+    background-color: #e4e3e3;
+    font-family: "Arial", sans-serif;
     font-size: 16px;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-/* HEADER RESPONSIVE */
-.menu {
-    width: 100%;
-    background:#A3C9A8;
-    padding: 10px 0;
-    position: relative;
-    top: 0;
-    height: 8vh;
-    left: 0;
-    z-index: 100;
+/*Barra de navegacion*/
+#barra {
+    width: 100%;               /* Ocupa todo el ancho de la pantalla */
+    background: #319101;       /* Color verde del fondo */
+    padding: 10px 0;           /* Padding superior e inferior de 10px */
+    position: fixed;        /* Permite posicionar elementos hijos con 'absolute' */
+    top: 0;                    /* Lo deja en la parte superior */
+    left: 0;                   /* Lo alinea a la izquierda */
+    z-index: 100;              /* Lo pone por encima de otros elementos */
+}
+ul {
+    list-style-type: none;     /* Quita los puntos de las listas */
+    padding-left: 500px;       /* Empuja los elementos del menú a la derecha */
 }
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: auto;
+    position: sticky;
+    display: flex;             /* Usa Flexbox para organizar los hijos en una fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;       /* Centra verticalmente */
+    width: 100%;               /* Ocupa todo el ancho disponible */
+    margin: auto;              /* Centrado automático si hay espacio */
+    flex-wrap: wrap;           /* Permite que los hijos bajen a otra línea si no caben */
 }
-  
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
+.logo-container {
+    display: flex;             /* Organiza el logo e ícono en fila */
+    align-items: center;       /* Centra verticalmente los elementos */
+    gap: 10px;                 /* Espacio entre el logo, la línea y el nombre */
 }
-.logo a{
-    text-decoration: none;
-    color: #1e5631;
-    transition: color 0.3s ease;
+.sena {
+    width: 40px;               /* Tamaño del logo del SENA */
+    margin-left: 20px;
 }
-.logo a:hover{
-    color: #fff;
+.separator {
+    height: 30px;              /* Altura de la línea vertical */
+    width: 2px;                /* Grosor de la línea */
+    background-color: #fff;   /* Color negro para la línea */
+    margin: 0 10px;            /* Espacio a los lados de la línea */
 }
-  
-.nav-links {
-    list-style: none;
-    display: flex;
+.logo-text {
+    font-size: 1.5rem;         /* Tamaño del texto EcoAventura */
+    font-weight: bold;         /* Texto en negrita */
+    color: #fff;              /* Color negro */
+    text-decoration: none;     /* Quita el subrayado del link */
 }
-  
-.nav-links li {
-    margin: 0 15px;
+.logo-text:hover {
+    color: #A4B65B;            /* Cambia el color al pasar el mouse por encima */
 }
-  
-.nav-links a {
-    text-decoration: none;
-    color: #1e5631;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-  
-.nav-links a:hover {
-    color: #fff;
-}
-  
-/* MENÚ HAMBURGUESA */
 .menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
+    position: absolute;        /* Se posiciona de forma independiente dentro del contenedor */
+    top: 45%;                  /* Lo sube un poco para centrarlo verticalmente */
+    right: 20px;               /* Lo pega a la derecha */
+    transform: translateY(-50%); /* Lo centra verticalmente mejor aún */
+    z-index: 999;              /* Lo pone por encima del resto de la nav */
+    display: none;             /* Oculto por defecto, solo aparece en responsive */
 }
+.nav-links {
+    display: flex;             /* Menú horizontal */
+    align-items: center;       /* Centra verticalmente */
+    list-style: none;          /* Quita los puntos de lista */
+}
+.nav-center {
+    display: flex;             
+    justify-content: flex-start; /* Alinea todo a la izquierda */
+    align-items: center;       
+    flex: 1;                   /* Toma todo el espacio posible */
+    gap: 20px;                 /* Espacio entre elementos */
+}
+.dropdown {
+    margin-left: auto;         /* Empuja el perfil totalmente a la derecha */
+    position: relative;        /* Necesario para posicionar el contenido */
+}
+.nav-links li a {
+    text-decoration: none;     /* Sin subrayado */
+    color: #fff;              /* Texto negro */
+    font-weight: 500;          /* Peso medio del texto */
+    transition: color 0.3s ease; /* Animación suave al cambiar color */
+    padding: 10px 15px;        /* Espaciado interno del enlace */
+    display: block;            /* Se comporta como bloque para captar bien el clic */
+}
+.nav-links li a:hover {
+    color: #A4B65B;              /* Al pasar el mouse cambia a blanco */
+}
+.lupa {
+    font-size: 20px;           /* Tamaño del ícono de lupa */
+    cursor: pointer;           /* Cambia el mouse a manito */
+    margin-right: 40px;        /* Aleja del perfil */
+    color: #fff;
+}
+.bi-person-circle {
+    font-size: 35px;           /* Tamaño del ícono de perfil */
+    cursor: pointer;           /* Manito al pasar el mouse */
+    margin-right: 20px;        /* Un poco de espacio derecho */
+}
+.dropdown-content {
+    position: absolute;        /* Posiciona debajo del ícono */
+    top: 100%;                 /* Lo pone justo abajo del ícono */
+    right: 0;                  /* Pegado al borde derecho */
+    background-color: #193013;/* Mismo verde del navbar */
+    min-width: 160px;          /* Ancho mínimo del menú desplegable */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Sombra para destacar */
+    z-index: 1;                /* Aparece sobre otros elementos */
+    display: none;             /* Oculto por defecto */
+    flex-direction: column;   /* Vertical */
+}
+.dropdown-content a {
+    color: #fff;              /* Texto negro */
+    padding: 12px 16px;        /* Espaciado interno */
+    text-decoration: none;     /* Quita subrayado */
+    display: block;            /* Toda el área clickeable */
+}
+.dropdown:hover .dropdown-content {
+    display: flex;             /* Al pasar el mouse muestra el menú */
+}
+
 /*Header*/
 .principal {
     width: 100%;
-    height: 650px;
+    height: 100vh;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -127,12 +184,6 @@ body {
 .img14{
     background-image: url(../img/m_laCelia.png);
 }
-#texto1{
-    padding: 100px;
-    padding-top: 0;
-    padding-bottom: 0;
-    text-shadow: 0 0 10px #000;
-}
 .introduccion{
     width: 100%;
     height: auto;
@@ -162,7 +213,7 @@ body {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    background: #D9D9D9;
+    background: #c4d1be;
     flex-wrap: wrap;
     position: relative;
     align-items: center;
@@ -176,13 +227,13 @@ body {
     height: 340px;
     overflow: hidden;
     margin: 10px;
-    box-shadow: 0 0 5px #555;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #576859;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding-top: 10px;
-    background-color:#ADADAD;
-    border: 5px;
+    background-color:#148d96;
 }
 .img_lugar img{
     width: 80%;
@@ -202,6 +253,9 @@ body {
     overflow: hidden;
     margin-bottom: 50px;
 }
+.tituloDescripcion{
+    font-weight: 600;
+}
 
 #btn {
     flex: 1 1 auto;
@@ -209,15 +263,15 @@ body {
     height: 45px;
     border-radius: 10px;
     border: none;
-    background-color: #ffffff;
-    color: black;
+    background-color: #1B676B;
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
   
 #btn:hover {
-    background-color: #f7f7f7;
+    background-color: #1B674B;
 }
   
 .guardar {
@@ -225,16 +279,22 @@ body {
     align-items: center;
     justify-content: center;
 }
-  
+.guardar i{
+    color: #1B676B;
+}
+.guardar i:hover{
+    color: #1B674B;
+}
+
 .bi {
     font-size: 28px;
-    color: black;
+    color: #fff;
     cursor: pointer;
     transition: color 0.3s ease;
 }
   
 .bi:hover {
-    color: #ffffff;
+    color: #A4B65B;
 }
   
   
@@ -248,75 +308,6 @@ body {
     padding-right: 10px;
     margin-top: 150px; /* 👈 esto crea espacio entre texto y botones */
 }
-  
-p{
-    font-weight: 600;
-}
-
-
-/* FOOTER ESTILOS */
-footer {
-    width: 100%;
-    background:linear-gradient(to right,#37c8d8, #5df0b8) ;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-  
-.footer-section {
-    margin: 10px;
-}
-  
-.footer-section h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-  
-.footer-links {
-    list-style: none;
-    padding: 0;
-}
-  
-.footer-links li {
-    margin: 5px 0;
-}
-  
-.footer-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-  
-.footer-links a:hover {
-    color: #555;
-}
-  
-/* ICONOS DE REDES SOCIALES */
-.footer-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-  
-.footer-icons a {
-    text-decoration: none;
-    font-size: 24px;
-    color: black;
-    transition: color 0.3s ease;
-}
-  
-.footer-icons a:hover {
-    color: #555;
-}
-
 
 @media screen and (max-width: 1440px) {
     .info{
@@ -332,7 +323,7 @@ footer {
         margin-top: 0;
     }
 }
-/* 🌐 NUEVO RESPONSIVE MEJORADO PARA MÓVILES */
+/* 🌐 RESPONSIVE MEJORADO PARA MÓVILES */
 @media screen and (max-width: 768px) {
     .ecolugar {
       flex-direction: column;
@@ -398,117 +389,115 @@ footer {
     }
 }
 
-  
-/* MEDIA QUERY PARA DISPOSITIVOS MÓVILES */
-@media screen and (max-width: 768px) {
-    /* Ajustes del header */
-    .nav-links {
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-      background:linear-gradient(to right,#37c8d8, #5df0b8);
-      position: absolute;
-      top: 50px;
-      left: -100%;
-      transition: all 300ms ease-in-out;
-      z-index: -1;
-    }
-    .nav-links li {
-      margin: 10px 0;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-  
-    .nav-links.active {
-      left: 0;
-    }
-  
-    /* Ajustes del footer */
-    footer {
-      flex-direction: column;
-      text-align: center;
-      padding-bottom: 60px;
-    }
-  
-    .footer-section {
-      margin-bottom: 15px;
-    }
+/*los estilos del footer*/
+footer {
+    display: flex;                         /* Usa Flexbox para alinear los elementos internos en fila */
+    flex-wrap: wrap;                       /* Permite que los elementos bajen a otra línea si no caben */
+    justify-content: space-around;        /* Distribuye espacio alrededor de los elementos */
+    align-items: center;                  /* Centra verticalmente los elementos */
+    background-color: #319101;           /* Color de fondo verde */
+    padding: 30px 0;                      /* Espaciado arriba y abajo de 30px */
 }
-
-/* FOOTER ESTILOS */
-
 .footer-section {
-    margin: 10px;
-}
-  
+    flex: 1;                              /* Cada sección ocupa el mismo espacio disponible */
+    text-align: center;                  /* Centra el texto dentro de la sección */
+    margin: 10px;                         /* Espacio alrededor de cada sección */
+} 
 .footer-section h3 {
-    font-size: 1.2rem; /* Tamaño normal */
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-  
-.footer-links {
-    list-style: none;
-    padding: 0;
-}
-  
-.footer-links li {
-    margin: 5px 0;
-}
-  
-.footer-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-  
-.footer-links a:hover {
-    color: #555;
-}
-  
-/* ICONOS DE REDES SOCIALES */
-.footer-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-  
+    margin-bottom: 10px;                 /* Espacio debajo del título h3 */
+    color: #fff;                          /* Color del texto oscuro */
+} 
 .footer-icons a {
-    text-decoration: none;
-    font-size: 24px;
-    color: black;
-    transition: color 0.3s ease;
+    margin: 0 10px;                      /* Espacio horizontal entre íconos */
+    font-size: 24px;                     /* Tamaño de los íconos */
+    color: #fff;                         /* Color negro */
+    transition: color 0.3s ease;         /* Transición suave al cambiar color */
 }
-  
 .footer-icons a:hover {
-    color: #555;
+    color:  #A4B65B;                     /* Color verde al pasar el cursor */
+}
+.ecoaventura {
+    width: 120px;                        /* Ancho fijo de la imagen */
+}
+.footer-links {
+    list-style: none;                   /* Quita los puntos de las listas */
+    padding: 0;                         /* Quita el espacio interno */
+}
+.footer-links li {
+    margin: 5px 0;                      /* Espacio vertical entre ítems */
+}
+.footer-links a {
+    text-decoration: none;             /* Quita el subrayado */
+    color: #fff;                        /* Color gris oscuro */
+}
+.footer-links a:hover {
+    color: #A4B65B;                     /* Cambia a blanco al pasar el cursor */
 }
   
-/* MEDIA QUERY PARA DISPOSITIVOS MÓVILES */
 @media screen and (max-width: 768px) {
-    footer {
-      flex-direction: column;
-      text-align: center;
-      padding-bottom: 60px;
-      position: relative;
+    .navbar {
+        flex-direction: column;         /* Cambia la dirección de los elementos a columna */
+        align-items: flex-start;        /* Alinea los elementos al inicio (izquierda) */
+        gap: 15px;                      /* Espacio vertical entre elementos */
     }
-  
+    .nav-links {
+        flex-direction: column;        /* Menú vertical */
+        width: 100%;                   /* Ocupa todo el ancho disponible */
+        gap: 10px;                     /* Espacio entre enlaces */
+    }
+    .menu-toggle {
+        display: block;                /* Muestra el ícono de menú hamburguesa */
+    }
     .footer-section {
-      margin-bottom: 10px;
+        flex: 100%;                    /* Ocupa todo el ancho disponible */
+        margin: 15px 0;                /* Espacio arriba y abajo */
     }
-  
-    .footer-section h3 {
-      font-size: 1rem; /* Texto más pequeño */
+    .logo-container {
+        justify-content: center;      /* Centra horizontalmente logo y texto */
+        width: 100%;                   /* Ocupa todo el ancho disponible */
     }
+}
   
-    .footer-links a {
-      font-size: 0.9rem; /* Enlaces más pequeños */
+@media screen and (max-width: 768px) {
+    .nav-links .menu,
+    .nav-links .lupa,
+    .nav-links .dropdown {
+        display: none;                /* Oculta todos estos elementos por defecto */
+    } 
+    .footer-section:last-child {
+        display: none;               /* Oculta la última sección del footer */
     }
-  
-    .footer-icons a {
-      font-size: 20px; /* Iconos un poco más pequeños */
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;                /* Oculta todo el menú por defecto */
+        flex-direction: column;      /* Los ítems se apilan verticalmente */
+        background: #39A900;        /* Fondo verde */
+        width: 100%;                 /* Ocupa todo el ancho */
+        padding: 10px 0;             /* Espaciado vertical */
+    }
+    .nav-links.active {
+        display: flex;               /* Muestra el menú cuando se le agrega la clase "active" con JS */
+    }
+    .menu-toggle {
+        display: block;              /* Muestra el icono hamburguesa */
+        font-size: 28px;             /* Tamaño grande */
+        cursor: pointer;             /* Cambia a manito al pasar el cursor */
+    }
+    .lupa, .dropdown, .menu {
+        text-align: center;          /* Centra el texto o icono */
+        margin: 10px 0;              /* Espaciado vertical */
+        right: 50px;                 /* (este no aplica si no es position absolute o fixed) */
+        right: 0;                    /* (sobrescribe la anterior línea) */
+    }
+    /* Oculta por defecto los ítems del menú */
+    .menu, .lupa, .dropdown {
+        display: none;
+    }
+    /* Al desplegar el menú, se muestran nuevamente */
+    .nav-links.active .menu,
+    .nav-links.active .lupa,
+    .nav-links.active .dropdown {
+        display: block;
     }
 }
