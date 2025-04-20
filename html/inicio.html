@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <link rel="stylesheet" href="../css/inicio.css">
     <title>Inicio ecoaventura</title>
 </head>
@@ -20,39 +20,38 @@
     
     <!-- HEADER CON BARRA DE NAVEGACIÓN -->
     
-    <section class="seccionLogueo">
-        <header id="barra">
-            <div class="navbar">
-                <div class="logo-container">
-                    <img class="sena" src="../img/Logo SENA.svg">
-                
-                    <div class="separator"></div>
-                
-                    <a class="logo-text" href="./inicio.html">EcoAventura</a>
+  <!-- HEADER CON BARRA DE NAVEGACIÓN -->
+  <section class="seccionLogueo">
+    <header id="barra">
+        <div class="navbar">
+            <div class="logo-container">
+                <img class="sena" src="../img/sena-blanco.svg">
+            
+                <div class="separator"></div>
+            
+                <a class="logo-text" href="./inicio.html">EcoAventura</a>
+            </div>
+            <div class="menu-toggle">&#9776;</div> <!-- Ícono de menú hamburguesa -->
+            <ul class="nav-links">
+                <div class="nav-center">
+                <li class="menu"><a href="./inicio.html">Inicio</a></li>
+                <li class="menu"><a href="./inicio.html#slider-container">Planifica tu viaje</a></li>
+                <i class="lupa bi-search"></i>
                 </div>
                 
-                <div class="menu-toggle">&#9776;</div> <!-- Ícono de menú hamburguesa -->
-                <ul class="nav-links">
-                    <div class="nav-center">
-                      <li class="menu"><a href="./inicio.html">Inicio</a></li>
-                      <li class="menu"><a href="#slider-container">Planifica tu viaje</a></li>
-                      <i class="lupa bi-search"></i>
-                    </div>
-                    
-                    <!-- Este queda a la derecha -->
-                    <li class="dropdown">
-                      <i class="bi bi-person-circle dropbtn"></i>
-                      <div class="dropdown-content">
+                <!-- Este queda a la derecha -->
+                <li class="dropdown">
+                    <i class="bi bi-person-circle dropbtn"></i>
+                    <div class="dropdown-content">
                         <a href="#">ID</a>
                         <a href="#">Seguridad</a>
                         <a href="#">Mis Favoritos</a>
-                      </div>
-                    </li>
-                  </ul>
-                  
-            </div>
-        </header>
-    </section>
+                    </div>
+                </li>
+            </ul> 
+        </div>
+    </header>
+</section>
         
 <!-- parte inicial de la pagina en el cual lleva un video de presentacion-->    
         <section class="inicio">
@@ -98,7 +97,7 @@
     <div class="carousel-wrapper">
         <div class="card-group">
             <div class="card">
-                <img src="../img/Bioparque Bonita Farm.jpeg" alt="Bioparque Bonita Farm">
+                <img class="imagen" src="../img/Bioparque Bonita Farm.jpeg" alt="Bioparque Bonita Farm">
                 <div class="layer"></div>
                 <div class="info">
                     <h1>Bioparque Bonita Farm</h1>
@@ -188,7 +187,7 @@
             <h1>Santa Rosa de Cabal</h1>
             <a>Aguas termales, montañas y el mejor chorizo de Colombia. Un rincón donde la naturaleza y el descanso se encuentran. ¡Ven y vívelo! </a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button><a class="Informacion" href="/html/m_santaRosa.html">Informacion</a></button>
             </div>
         </div>
     </div>
@@ -199,7 +198,7 @@
             <h1>Marsella</h1>
             <a> Un pueblo vibrante con calles coloridas y una joya oculta: el Jardín Botánico Alejandro Humboldt. Cultura, café y tradición en cada rincón. ¡Déjate sorprender! </a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button><a class="Informacion" href="/html/m_marsella.html">Informacion</a></button>
             </div>
         </div>
     </div>
@@ -210,7 +209,7 @@
             <h1>Santuario</h1>
             <a> Naturaleza pura y hogar del Santuario de Fauna y Flora Otún Quimbaya. Un destino ideal para el ecoturismo y la aventura. ¡Descúbrelo! </a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button><a class="Informacion" href="/html/m_santuario.html">Informacion</a></button>
             </div>
         </div>
     </div>
@@ -221,7 +220,7 @@
             <h1>Apía</h1>
             <a> Balcones coloridos, café de altura y el mejor mirador del Tatamá. Un pueblo con alma musical y paisajes que quitan el aliento. ¡Vívelo! </a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button ><a class="Informacion" href="/html/m_apia.html">Informacion</a></button>
             </div>
         </div>
     </div>
@@ -232,7 +231,7 @@
             <h1>Belén de Umbría</h1>
             <a>Tierra de café y neblina, con paisajes de postal y una tradición cafetera que enamora. Un rincón mágico del Eje Cafetero. ¡Descúbrelo! </a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button><a  class="Informacion"href="/html/m_belen.html">Informacion</a></button>
             </div>
         </div>
     </div>
@@ -243,7 +242,7 @@
             <h1>Dosquebradas</h1>
             <a>La ciudad industrial de Risaralda, un cruce entre modernidad y naturaleza. Rodeada de montañas y cascadas, es el epicentro del crecimiento económico del departamento. ¡Ven a conocerla! </a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button ><a class="Informacion" href="/html/m_dosquebradas.html">Informacion</a></button>
             </div>
         </div>
     </div>
@@ -254,7 +253,7 @@
             <h1>Guática</h1>
             <a>Un rincón escondido entre montañas, con cafetales interminables y aguas termales naturales. Un paraíso por descubrir en el corazón de Risaralda. ¡Atrévete a explorarlo! </a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button ><a class="Informacion" href="/html/m_guatica.html">Informacion</button>
             </div>
         </div>
     </div>
@@ -266,7 +265,7 @@
             <a>Un paraíso entre montañas, donde el aroma del café y la frescura de la naturaleza se combinan con la calidez de su gente.
                  Un destino lleno de encanto y tranquilidad. ¡Ven y vívelo!</a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button ><a class="Informacion" href="/html/m_laCelia.html">Informacion</a></button>
             </div>
         </div>
     </div>
@@ -278,7 +277,7 @@
             <a>La “Perla de Risaralda”, un puerto de historia y tradición a orillas del majestuoso río Cauca.
                  Su energía vibrante y paisajes únicos te esperan. ¡Descúbrelo!</a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button ><a class="Informacion" href="m_laVirginia.html">Informacion</a></button>
             </div>
         </div>
     </div>
@@ -290,7 +289,7 @@
             <a>Balboa, el "Balcón del Paisaje", ofrece vistas espectaculares,
                  aire puro y la calidez de un pueblo cafetero que enamora con su tranquilidad y naturaleza.</a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button ><a class="Informacion"href="/html/m_balboa.html">Informacion</a></button>
             </div>
         </div>
     </div>
@@ -302,7 +301,7 @@
             <a> Un paraíso entre montañas, ríos cristalinos y bosques exuberantes. Hogar de la comunidad Emberá,
                  donde la cultura indígena y la naturaleza crean un destino único para el ecoturismo. ¡Descúbrelo!</a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button ><a class="Informacion" href="/html/m_mistrato.html">Informacion</a></button>
             </div>
         </div>
     </div>
@@ -314,7 +313,7 @@
             <a> Un tesoro multicultural entre montañas y selvas, donde conviven comunidades indígenas,
                  afrodescendientes y mestizas en armonía con la naturaleza. ¡Explóralo!</a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button ><a class="Informacion" href="/html/m_puebloRico.html">Informacion</a></button>
             </div>
         </div>
     </div>
@@ -326,7 +325,7 @@
             <a> La “Villa de los Cerros” es un municipio de tradición minera y cafetera, rodeado de imponentes montañas y sitios sagrados indígenas.
                  Su historia,cultura y paisajes lo hacen único. ¡Ven a conocerlo!</a>
             <div class="btn-container">
-                <button>Informacion</button>
+                <button ><a class="Informacion" href="/html/m_quinchia.html ">Informacion</a></button>
             </div>
         </div>
     </div>
@@ -334,64 +333,31 @@
 </div>
 
   
-    <!--inicio del footer-->
-    <footer>
-        <div class="footer-section">
-            <h3 id="arreglando">Redes Sociales</h3>
-            <div class="footer-icons">
-                <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
-                <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
-            </div>
+<footer>
+    <div class="footer-section">
+        <h3 id="arreglando">Redes Sociales</h3>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
         </div>
+    </div>
 
-        <div class="footer-section">
-            <img class="ecoaventura" src="../img/logo del proyecto.png" alt="logo de EcoAventura">
-        </div>
+    <div class="footer-section">
+        <img class="ecoaventura" src="../img/logo del proyecto.png" alt="logo de EcoAventura">
+    </div>
 
-        <div class="footer-section">
-            <ul class="footer-links">
-                <li><a href="./index.html ">Inicio</a></li>
-                <li><a href="./preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
-                <li><a href="./registroSocio.html">Haz parte de nosotros</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="./terminosycondiciones.html">Terminos y condiciones </a></li>
-            </ul>
-        </div>
-    </footer>
-    <script>
-        // Menú hamburguesa toggle
-        const toggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-      
-        toggle.addEventListener('click', () => {
-          navLinks.classList.toggle('active');
-        });
-      
-        // Dropdown perfil toggle (móviles)
-        const profileIcon = document.getElementById('profileIcon');
-        const profileDropdown = document.getElementById('profileDropdown');
-      
-        profileIcon.addEventListener('click', (e) => {
-          e.stopPropagation(); // Evita que se cierre al hacer clic
-          profileDropdown.classList.toggle('show-dropdown');
-        });
-      
-        // Cierra dropdown si se hace clic fuera
-        document.addEventListener('click', (e) => {
-          if (!profileDropdown.contains(e.target) && !profileIcon.contains(e.target)) {
-            profileDropdown.classList.remove('show-dropdown');
-          }
-        });
-      </script>
-
-      <!-- scripts -->
-
-
-<!-- stats.js -->
-<script src="../js/lib/stats.js"></script>
-
-
+    <div class="footer-section">
+        <ul class="footer-links">
+            <li><a href="./index.html ">Inicio</a></li>
+            <li><a href="./preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+            <li><a href="./registroSocio.html">Haz parte de nosotros</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="./terminosycondiciones.html">Terminos y condiciones </a></li>
+        </ul>
+    </div>
+</footer>
+<script src="../js/barraNavegacion.js"></script>
 <script src="../js/inicio.js"></script>
 </body>
 </html>
