@@ -8,6 +8,7 @@
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #EBFFF4;
+    min-height: 100vh;
   }
 
   .banner {
