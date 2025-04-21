@@ -157,6 +157,7 @@ main {
 
 }
 
+
 .info-columns button {
   margin-top: 5px;
   padding: 5px 10px;
@@ -199,6 +200,10 @@ main {
   border: 1px solid #444;
   background-color: white;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 footer {
     display: flex;                         /* Usa Flexbox para alinear los elementos internos en fila */
@@ -499,4 +504,25 @@ h1{
   align-self: center;
   text-align: center;
   margin-top: 20px;
+}
+
+.boton-volver-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0; /* espacio arriba y abajo */
+}
+
+.boton-volver {
+  padding: 12px 30px;
+  background-color: #2E7D32;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.boton-volver:hover {
+  background-color: #1b5e20;
 }
