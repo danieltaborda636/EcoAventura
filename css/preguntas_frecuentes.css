@@ -96,12 +96,13 @@ ul {
   font-size: 35px;           /* Tamaño del ícono de perfil */
   cursor: pointer;           /* Manito al pasar el mouse */
   margin-right: 20px;        /* Un poco de espacio derecho */
+  color: #fff;
 }
 .dropdown-content {
   position: absolute;        /* Posiciona debajo del ícono */
   top: 100%;                 /* Lo pone justo abajo del ícono */
   right: 0;                  /* Pegado al borde derecho */
-  background-color: #193013;/* Mismo verde del navbar */
+  background-color: #319101;/* Mismo verde del navbar */
   min-width: 160px;          /* Ancho mínimo del menú desplegable */
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Sombra para destacar */
   z-index: 1;                /* Aparece sobre otros elementos */
