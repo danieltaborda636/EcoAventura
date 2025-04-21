@@ -7,6 +7,7 @@
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #EBFFF4;
   }
 
   .banner {
@@ -24,7 +25,8 @@
     padding: 40px 20px;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
+    background: #EBFFF4;
+    font-size: larger;
   }
 
   .info-text {
