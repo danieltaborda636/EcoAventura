@@ -1,126 +1,427 @@
+/*Barra de navegacion*/
+#barra {
+  width: 100%;               /* Ocupa todo el ancho de la pantalla */
+  background: #319101;       /* Color verde del fondo */
+  padding: 10px 0;           /* Padding superior e inferior de 10px */
+  position: fixed;        /* Permite posicionar elementos hijos con 'absolute' */
+  top: 0;                    /* Lo deja en la parte superior */
+  left: 0;                   /* Lo alinea a la izquierda */
+  z-index: 100;              /* Lo pone por encima de otros elementos */
+}
+ul {
+  list-style-type: none;     /* Quita los puntos de las listas */
+  padding-left: 500px;       /* Empuja los elementos del menú a la derecha */
+}
+.navbar {
+  position: sticky;
+  display: flex;             /* Usa Flexbox para organizar los hijos en una fila */
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: center;       /* Centra verticalmente */
+  width: 100%;               /* Ocupa todo el ancho disponible */
+  margin: auto;              /* Centrado automático si hay espacio */
+  flex-wrap: wrap;           /* Permite que los hijos bajen a otra línea si no caben */
+}
+.logo-container {
+  display: flex;             /* Organiza el logo e ícono en fila */
+  align-items: center;       /* Centra verticalmente los elementos */
+  gap: 10px;                 /* Espacio entre el logo, la línea y el nombre */
+}
+.sena {
+  width: 40px;               /* Tamaño del logo del SENA */
+  margin-left: 20px;
+}
+.separator {
+  height: 30px;              /* Altura de la línea vertical */
+  width: 2px;                /* Grosor de la línea */
+  background-color: #fff;   /* Color negro para la línea */
+  margin: 0 10px;            /* Espacio a los lados de la línea */
+}
+.logo-text {
+  font-size: 1.5rem;         /* Tamaño del texto EcoAventura */
+  font-weight: bold;         /* Texto en negrita */
+  color: #fff;              /* Color negro */
+  text-decoration: none;     /* Quita el subrayado del link */
+}
+.logo-text:hover {
+  color: #A4B65B;            /* Cambia el color al pasar el mouse por encima */
+}
+.menu-toggle {
+  position: absolute;        /* Se posiciona de forma independiente dentro del contenedor */
+  top: 45%;                  /* Lo sube un poco para centrarlo verticalmente */
+  right: 20px;               /* Lo pega a la derecha */
+  transform: translateY(-50%); /* Lo centra verticalmente mejor aún */
+  z-index: 999;              /* Lo pone por encima del resto de la nav */
+  display: none;             /* Oculto por defecto, solo aparece en responsive */
+}
+.nav-links {
+  display: flex;             /* Menú horizontal */
+  align-items: center;       /* Centra verticalmente */
+  list-style: none;          /* Quita los puntos de lista */
+}
+.nav-center {
+  display: flex;             
+  justify-content: flex-start; /* Alinea todo a la izquierda */
+  align-items: center;       
+  flex: 1;                   /* Toma todo el espacio posible */
+  gap: 20px;                 /* Espacio entre elementos */
+}
+.dropdown {
+  margin-left: auto;         /* Empuja el perfil totalmente a la derecha */
+  position: relative;        /* Necesario para posicionar el contenido */
+}
+.nav-links li a {
+  text-decoration: none;     /* Sin subrayado */
+  color: #fff;              /* Texto negro */
+  font-weight: 500;          /* Peso medio del texto */
+  transition: color 0.3s ease; /* Animación suave al cambiar color */
+  padding: 10px 15px;        /* Espaciado interno del enlace */
+  display: block;            /* Se comporta como bloque para captar bien el clic */
+}
+.nav-links li a:hover {
+  color: #A4B65B;              /* Al pasar el mouse cambia a blanco */
+}
+.lupa {
+  font-size: 20px;           /* Tamaño del ícono de lupa */
+  cursor: pointer;           /* Cambia el mouse a manito */
+  margin-right: 40px;        /* Aleja del perfil */
+  color: #fff;
+}
+.bi-person-circle {
+  font-size: 35px;           /* Tamaño del ícono de perfil */
+  cursor: pointer;           /* Manito al pasar el mouse */
+  margin-right: 20px;        /* Un poco de espacio derecho */
+  color: #fff;            
+}
+.dropdown-content {
+  position: absolute;        /* Posiciona debajo del ícono */
+  top: 100%;                 /* Lo pone justo abajo del ícono */
+  right: 0;                  /* Pegado al borde derecho */
+  background-color: #319101;/* Mismo verde del navbar */
+  min-width: 160px;          /* Ancho mínimo del menú desplegable */
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Sombra para destacar */
+  z-index: 1;                /* Aparece sobre otros elementos */
+  display: none;             /* Oculto por defecto */
+  flex-direction: column;   /* Vertical */
+}
+.dropdown-content a {
+  color: #fff;              /* Texto negro */
+  padding: 12px 16px;        /* Espaciado interno */
+  text-decoration: none;     /* Quita subrayado */
+  display: block;            /* Toda el área clickeable */
+}
+.dropdown:hover .dropdown-content {
+  display: flex;             /* Al pasar el mouse muestra el menú */
+}
+
+
 * {
-    padding: 0;                         /* Elimina el espacio interno de todos los elementos */
-    margin: 0;                          /* Elimina el espacio externo de todos los elementos */
-    box-sizing: border-box;            /* Hace que el padding y border no sumen al ancho/alto */
-    font-family: "Arial", sans-serif;  /* Define la fuente global para todo el sitio */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(../img/fondo_registro.jpg);
+    background-size: cover;
+}
+
+.container-form {
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+  height: 500px;
+  max-width: 900px;
+  transition: all 1s ease;
+  margin: 10px;
+}
+
+.information {
+  position: relative; /* Necesario para posicionar el ::before */
+  width: 40%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden; /* Para que el fondo no se salga del borde redondeado */
+  z-index: 1; /* Para que el contenido esté encima del fondo */
+
+}
+
+.information::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(240, 243, 243, 0.7); /* Color con opacidad */
+  z-index: -1; /* Para que quede detrás del contenido */
+}
+
+.info-childs {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.info-childs h2 {
+  font-size: 2.5rem;
+  color: #060505;
+  font-weight: 800;
+}
+
+.info-childs p {
+  margin: 15px 0 ;
+  color: #080808;
+  font-weight: 800
+}
+
+.info-childs input {
+  background-color: transparent;
+  outline: none;
+  border: solid 2px #148d96;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 10px 20px;
+  color: #000;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.info-childs input:hover {
+  background-color: #148d96;
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 5px #148d96;
+}
+
+.form-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  text-align: center;
+  background-color: rgba(234, 253, 230, 0.8);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 1; /* Para que el contenido esté encima del fondo */
+  overflow: hidden; /* Para que el fondo no se salga del borde redondeado */
+}
+
+
+
+.form-information-childs {
+  padding: 0 30px;
+}
+
+.form-information-childs h2 {
+  color: #0e0c0c;
+  font-size: 2rem;
+}
+
+.form-information-childs p {
+  color: #000000;
+  font-weight: 600;
+}
+
+.icons {
+  margin: 15px 0;
+}
+
+.icons i {
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #148d96;
+  border: solid thin #164a30;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.icons i:hover {
+  background-color: #148d96;
+  color: #fff;
+}
+
+.form {
+  margin: 30px 0 0 0;
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  padding: 0 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.form label input {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: #333;
+}
+
+.form label i {
+  color: #a7a7a7;
+}
+
+.form input[type="submit"] {
+  background-color: #148d96;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.form input[type="submit"]:hover {
+  background-color: #073336;
+}
+
+.hide {
+  position: absolute;
+  transform: translateY(-300%);
+}
+
+/*PERSONALIZACION DE MIS ALERTAS Y MENSAJES */
+.form div .alerta {
+  width: 290px;
+  text-align: left;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  font-size: .8rem;
+}
+
+.form > .alerta-error,
+.form > .alerta-exito {
+  display: none;
+}
+
+.form .alertaError {
+  display: block;
+  background-color: #F66060;
+  padding: .5rem 1rem;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: .8rem;
+}
+
+.form .alertaExito {
+  display: block;
+  background-color: #0ca828;
+  padding: .5rem 1rem;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: .8rem;
+}
+
+.form .error {
+  outline: solid 2px #9d2222;
+}
+
+#footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 80vh;
+  right: 0;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  font-size: 1.2rem;
+}
+#footer p {
+  margin-bottom: 20px; /* o el valor que quieras */
+}
+/*RESPONSIVE FORM*/
+
+@media screen and (max-width:750px) {
+  html {
+    font-size: 12px;
   }
-  body {
-    overflow-x: hidden;              /* Evita que se vea scroll horizontal si algo se sale */
-    background: white;              /* Establece el fondo blanco de toda la página */
-    width: 100%;                    /* El ancho del body será del 100% de la pantalla */
-    min-height: 100vh;              /* Altura mínima del body será toda la altura visible */
-    display: flex;                  /* Activa Flexbox para organizar su contenido */
-    flex-direction: column;        /* Los hijos se colocan de arriba hacia abajo */
-    justify-content: space-between;/* Distribuye el contenido con espacio entre ellos */
-  }
-  #barra {
-    width: 100%;               /* Ocupa todo el ancho de la pantalla */
-    background: #39A900;       /* Color verde del fondo */
-    padding: 10px 0;           /* Padding superior e inferior de 10px */
-    position: relative;        /* Permite posicionar elementos hijos con 'absolute' */
-    top: 0;                    /* Lo deja en la parte superior */
-    left: 0;                   /* Lo alinea a la izquierda */
-    z-index: 100;              /* Lo pone por encima de otros elementos */
-  }
-  ul {
-    list-style-type: none;     /* Quita los puntos de las listas */
-    padding-left: 500px;       /* Empuja los elementos del menú a la derecha */
-  }
-  .navbar {
-    display: flex;             /* Usa Flexbox para organizar los hijos en una fila */
-    justify-content: space-between; /* Espacio entre los elementos */
-    align-items: center;       /* Centra verticalmente */
-    width: 100%;               /* Ocupa todo el ancho disponible */
-    margin: auto;              /* Centrado automático si hay espacio */
-    flex-wrap: wrap;           /* Permite que los hijos bajen a otra línea si no caben */
-  }
-  .logo-container {
-    display: flex;             /* Organiza el logo e ícono en fila */
-    align-items: center;       /* Centra verticalmente los elementos */
-    gap: 10px;                 /* Espacio entre el logo, la línea y el nombre */
-  }
-  .sena {
-    width: 40px;               /* Tamaño del logo del SENA */
-  }
-  .separator {
-    height: 30px;              /* Altura de la línea vertical */
-    width: 2px;                /* Grosor de la línea */
-    background-color: black;   /* Color negro para la línea */
-    margin: 0 10px;            /* Espacio a los lados de la línea */
-  }
-  .logo-text {
-    font-size: 1.5rem;         /* Tamaño del texto EcoAventura */
-    font-weight: bold;         /* Texto en negrita */
-    color: black;              /* Color negro */
-    text-decoration: none;     /* Quita el subrayado del link */
-  }
-  .logo-text:hover {
-    color: #ffffff;            /* Cambia el color al pasar el mouse por encima */
-  }
-  .menu-toggle {
-    position: absolute;        /* Se posiciona de forma independiente dentro del contenedor */
-    top: 45%;                  /* Lo sube un poco para centrarlo verticalmente */
-    right: 20px;               /* Lo pega a la derecha */
-    transform: translateY(-50%); /* Lo centra verticalmente mejor aún */
-    z-index: 999;              /* Lo pone por encima del resto de la nav */
-    display: none;             /* Oculto por defecto, solo aparece en responsive */
-  }
-  .nav-links {
-    display: flex;             /* Menú horizontal */
-    align-items: center;       /* Centra verticalmente */
-    list-style: none;          /* Quita los puntos de lista */
-  }
-  .nav-center {
-    display: flex;             
-    justify-content: flex-start; /* Alinea todo a la izquierda */
-    align-items: center;       
-    flex: 1;                   /* Toma todo el espacio posible */
-    gap: 20px;                 /* Espacio entre elementos */
-  }
-  .dropdown {
-    margin-left: auto;         /* Empuja el perfil totalmente a la derecha */
-    position: relative;        /* Necesario para posicionar el contenido */
-  }
-  .nav-links li a {
-    text-decoration: none;     /* Sin subrayado */
-    color: black;              /* Texto negro */
-    font-weight: 500;          /* Peso medio del texto */
-    transition: color 0.3s ease; /* Animación suave al cambiar color */
-    padding: 10px 15px;        /* Espaciado interno del enlace */
-    display: block;            /* Se comporta como bloque para captar bien el clic */
-  }
-  .nav-links li a:hover {
-    color: white;              /* Al pasar el mouse cambia a blanco */
-  }
-  .lupa {
-    font-size: 20px;           /* Tamaño del ícono de lupa */
-    cursor: pointer;           /* Cambia el mouse a manito */
-    margin-right: 40px;        /* Aleja del perfil */
-  }
-  .bi-person-circle {
-    font-size: 35px;           /* Tamaño del ícono de perfil */
-    cursor: pointer;           /* Manito al pasar el mouse */
-    margin-right: 10px;        /* Un poco de espacio derecho */
-  }
-  .dropdown-content {
-    position: absolute;        /* Posiciona debajo del ícono */
-    top: 100%;                 /* Lo pone justo abajo del ícono */
-    right: 0;                  /* Pegado al borde derecho */
-    background-color: #39A900;/* Mismo verde del navbar */
-    min-width: 160px;          /* Ancho mínimo del menú desplegable */
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Sombra para destacar */
-    z-index: 1;                /* Aparece sobre otros elementos */
-    display: none;             /* Oculto por defecto */
-    flex-direction: column;   /* Vertical */
-  }
-  .dropdown-content a {
-    color: black;              /* Texto negro */
-    padding: 12px 16px;        /* Espaciado interno */
-    text-decoration: none;     /* Quita subrayado */
-    display: block;            /* Toda el área clickeable */
-  }
-  .dropdown:hover .dropdown-content {
-    display: flex;             /* Al pasar el mouse muestra el menú */
+}
+
+@media screen and (max-width:580px) {
+  html {
+    font-size: 15px;
   }
 
-/*-----------------------------------------Footer----------------------------------------------------*/
+  .container-form {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .information {
+    width: 100%;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0;
+  }
+
+  .form-information {
+    width: 100%;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+  }
+}
+
+#footer {
+  position: absolute;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0px 0;
+  color: white;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;                /* Oculta todo el menú por defecto */
+      flex-direction: column;      /* Los ítems se apilan verticalmente */
+      background: #39A900;        /* Fondo verde */
+      width: 100%;                 /* Ocupa todo el ancho */
+      padding: 10px 0;             /* Espaciado vertical */
+  }
+  .nav-links.active {
+      display: flex;               /* Muestra el menú cuando se le agrega la clase "active" con JS */
+  }
+  .menu-toggle {
+      display: block;              /* Muestra el icono hamburguesa */
+      font-size: 28px;             /* Tamaño grande */
+      cursor: pointer;             /* Cambia a manito al pasar el cursor */
+  }
+  .lupa, .dropdown, .menu {
+      text-align: center;          /* Centra el texto o icono */
+      margin: 10px 0;              /* Espaciado vertical */
+      right: 50px;                 /* (este no aplica si no es position absolute o fixed) */
+      right: 0;                    /* (sobrescribe la anterior línea) */
+  }
+  /* Oculta por defecto los ítems del menú */
+  .menu, .lupa, .dropdown {
+      display: none;
+  }
+  /* Al desplegar el menú, se muestran nuevamente */
+  .nav-links.active .menu,
+  .nav-links.active .lupa,
+  .nav-links.active .dropdown {
+      display: block;
+  }
+}
