@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planificar Viaje</title>
+  <link rel="stylesheet" href="../css/planifica.css">
+  <link rel="stylesheet" href="../css/municipios.css">
+  
+</head>
+<body>
+     <!-- HEADER CON BARRA DE NAVEGACIÓN -->
+     <section class="seccionLogueo">
+        <header id="barra">
+            <div class="navbar">
+                <div class="logo-container">
+                    <img class="sena" src="../img/sena-blanco.svg">
+                
+                    <div class="separator"></div>
+                
+                    <a class="logo-text" href="./inicio.html">EcoAventura</a>
+                </div>
+                <div class="menu-toggle">&#9776;</div> <!-- Ícono de menú hamburguesa -->
+                <ul class="nav-links">
+                    <div class="nav-center">
+                    <li class="menu"><a href="./inicio.html">Inicio</a></li>
+                    <li class="menu"><a href="./inicio.html#slider-container">Planifica tu viaje</a></li>
+                    <i class="lupa bi-search"></i>
+                    </div>
+                    
+                    <!-- Este queda a la derecha -->
+                    <li class="dropdown">
+                        <i class="bi bi-person-circle dropbtn"></i>
+                        <div class="dropdown-content">
+                            <a href="#">ID</a>
+                            <a href="#">Seguridad</a>
+                            <a href="#">Mis Favoritos</a>
+                        </div>
+                    </li>
+                </ul> 
+            </div>
+        </header>
+    </section>
+
+
+
+
+
+  <div class="hero">
+    <h1>Planificar viaje</h1>
+    <p>Desde el primer paso de tu viaje hasta la organización del próximo.</p>
+  </div>  <div class="section">
+    <div class="map">
+      <img src="../img/mapa_risa.png" alt="" width="500px" height="500px">
+    </div>
+    <div class="info">
+      <h2>Planea la EcoAventura de tus sueños</h2>
+      <p>Convierte tus planes de viaje en una vivencia única e inolvidable.</p>
+      <button class="btn" onclick="location.href='';">Comienza a planear</button>
+    </div>
+  </div>  <div class="places">
+    <h2>¿Por dónde comenzar?</h2>
+    <p>Te sugerimos los sitios más valorados hasta el momento</p><div class="grid">
+  <!-- Repite esta tarjeta para más lugares -->
+  <div class="card">
+    <img src="../img/termales.jpg" alt="Lugar 1">
+    <h3>Termales de Santa Rosa</h3>
+    <div class="location">
+      <span>Santa Rosa de Cabal, Risaralda</span>
+    </div>
+    <div class="stars" data-score="0">
+      <span class="star" onclick="rate(this, 1)">&#9733;</span>
+      <span class="star" onclick="rate(this, 2)">&#9733;</span>
+      <span class="star" onclick="rate(this, 3)">&#9733;</span>
+      <span class="star" onclick="rate(this, 4)">&#9733;</span>
+      <span class="star" onclick="rate(this, 5)">&#9733;</span>
+      <span class="rating-count">0 estrellas</span>
+    </div>
+  </div>
+  <div class="card">
+    <img src="../img/nona.jpg" alt="Lugar 2">
+    <h3>Parque Municipal Natural La Nona</h3>
+    <div class="location">
+      <span>Marsella, Risaralda</span>
+    </div>
+    <div class="stars" data-score="0">
+      <span class="star" onclick="rate(this, 1)">&#9733;</span>
+      <span class="star" onclick="rate(this, 2)">&#9733;</span>
+      <span class="star" onclick="rate(this, 3)">&#9733;</span>
+      <span class="star" onclick="rate(this, 4)">&#9733;</span>
+      <span class="star" onclick="rate(this, 5)">&#9733;</span>
+      <span class="rating-count">0 estrellas</span>
+    </div>
+  </div>
+  <div class="card">
+    <img src="../img/royal.jpg" alt="Lugar 3">
+    <h3> Puerto Roy Al SPA</h3>
+    <div class="location">
+      <span>La Virginia-Viterbo, Belalcazar, Caldas</span>
+    </div>
+    <div class="stars" data-score="0">
+      <span class="star" onclick="rate(this, 1)">&#9733;</span>
+      <span class="star" onclick="rate(this, 2)">&#9733;</span>
+      <span class="star" onclick="rate(this, 3)">&#9733;</span>
+      <span class="star" onclick="rate(this, 4)">&#9733;</span>
+      <span class="star" onclick="rate(this, 5)">&#9733;</span>
+      <span class="rating-count">0 estrellas</span>
+    </div>
+  </div>
+  <div class="card">
+    <img src="../img/virginia.jpg" alt="Lugar 1">
+    <h3>Parque Mirador Las Cometas</h3>
+    <div class="location">
+      <span>La Virginia, Risaralda</span>
+    </div>
+    <div class="stars" data-score="0">
+      <span class="star" onclick="rate(this, 1)">&#9733;</span>
+      <span class="star" onclick="rate(this, 2)">&#9733;</span>
+      <span class="star" onclick="rate(this, 3)">&#9733;</span>
+      <span class="star" onclick="rate(this, 4)">&#9733;</span>
+      <span class="star" onclick="rate(this, 5)">&#9733;</span>
+      <span class="rating-count">0 estrellas</span>
+    </div>
+  </div>
+
+  <!-- Más tarjetas -->
+</div>
+
+  </div> 
+   <!--inicio del footer-->
+   <footer>
+    <div class="footer-section">
+        <h3 id="arreglando">Redes Sociales</h3>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <img class="ecoaventura" src="../img/logo del proyecto.png" alt="logo de EcoAventura">
+    </div>
+
+    <div class="footer-section">
+        <ul class="footer-links">
+            <li><a href="./index.html ">Inicio</a></li>
+            <li><a href="./preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+            <li><a href="./registroSocio.html">Haz parte de nosotros</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="./terminosycondiciones.html">Terminos y condiciones </a></li>
+        </ul>
+    </div>
+</footer>
+<script src="../js/barraNavegacion.js"></script> 
+  <script>
+    function rate(element, value) {
+      const stars = element.parentElement.querySelectorAll('.star');
+      stars.forEach((star, index) => {
+        if (index < value) {
+          star.classList.add('checked');
+        } else {
+          star.classList.remove('checked');
+        }
+      });
+      const countText = element.parentElement.querySelector('.rating-count');
+      countText.textContent = `${value} estrella${value > 1 ? 's' : ''}`;
+    }
+  </script>
+  </body>
+</html>
