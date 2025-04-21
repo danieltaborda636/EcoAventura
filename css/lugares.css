@@ -9,40 +9,123 @@ body {
   background-color: #f5f5f5;
 }
 
-header {
-  background-color: #4caf50;
+#barra {
+    width: 100%;               /* Ocupa todo el ancho de la pantalla */
+    background: #319101;       /* Color verde del fondo */
+    padding: 10px 0;           /* Padding superior e inferior de 10px */
+    position: fixed;        /* Permite posicionar elementos hijos con 'absolute' */
+    top: 0;                    /* Lo deja en la parte superior */
+    left: 0;                   /* Lo alinea a la izquierda */
+    z-index: 100;              /* Lo pone por encima de otros elementos */
 }
-
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+ul {
+    list-style-type: none;     /* Quita los puntos de lass listas */
+    padding-left: 500px;       /* Empuja los elementos del menú a la derecha */
 }
-
-.logo {
-  flex: 1;
-  font-weight: bold;
-  font-size: 18px;
+.navbar {
+    position: sticky;
+    display: flex;             /* Usa Flexbox para organizar los hijos en una fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;       /* Centra verticalmente */
+    width: 100%;               /* Ocupa todo el ancho disponible */
+    margin: auto;              /* Centrado automático si hay espacio */
+    flex-wrap: wrap;           /* Permite que los hijos bajen a otra línea si no caben */
 }
-
+.logo-container {
+    display: flex;             /* Organiza el logo e ícono en fila */
+    align-items: center;       /* Centra verticalmente los elementos */
+    gap: 10px;                 /* Espacio entre el logo, la línea y el nombre */
+}
+.sena {
+    width: 40px;               /* Tamaño del logo del SENA */
+    margin-left: 20px;
+}
+.separator {
+    height: 30px;              /* Altura de la línea vertical */
+    width: 2px;                /* Grosor de la línea */
+    background-color: #fff;   /* Color negro para la línea */
+    margin: 0 10px;            /* Espacio a los lados de la línea */
+}
+.logo-text {
+    font-size: 1.5rem;         /* Tamaño del texto EcoAventura */
+    font-weight: bold;         /* Texto en negrita */
+    color: #fff;              /* Color negro */
+    text-decoration: none;     /* Quita el subrayado del link */
+}
+.logo-text:hover {
+    color: #A4B65B;            /* Cambia el color al pasar el mouse por encima */
+}
+.menu-toggle {
+    position: absolute;        /* Se posiciona de forma independiente dentro del contenedor */
+    top: 45%;                  /* Lo sube un poco para centrarlo verticalmente */
+    right: 20px;               /* Lo pega a la derecha */
+    transform: translateY(-50%); /* Lo centra verticalmente mejor aún */
+    z-index: 999;              /* Lo pone por encima del resto de la nav */
+    display: none;             /* Oculto por defecto, solo aparece en responsive */
+}
+.nav-links {
+    display: flex;             /* Menú horizontal */
+    align-items: center;       /* Centra verticalmente */
+    list-style: none;          /* Quita los puntos de lista */
+}
 .nav-center {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  padding-right: 20rem;
+    display: flex;             
+    justify-content: flex-start; /* Alinea todo a la izquierda */
+    align-items: center;       
+    flex: 1;                   /* Toma todo el espacio posible */
+    gap: 20px;                 /* Espacio entre elementos */
 }
-
-.nav-center a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  margin-right: 10px;
+.dropdown {
+    margin-left: auto;         /* Empuja el perfil totalmente a la derecha */
+    position: relative;        /* Necesario para posicionar el contenido */
+}
+.nav-links li a {
+    text-decoration: none;     /* Sin subrayado */
+    color: #fff;              /* Texto negro */
+    font-weight: 500;          /* Peso medio del texto */
+    transition: color 0.3s ease; /* Animación suave al cambiar color */
+    padding: 10px 15px;        /* Espaciado interno del enlace */
+    display: block;            /* Se comporta como bloque para captar bien el clic */
+}
+.nav-links li a:hover {
+    color: #A4B65B;              /* Al pasar el mouse cambia a blanco */
+}
+.lupa {
+    font-size: 20px;           /* Tamaño del ícono de lupa */
+    cursor: pointer;           /* Cambia el mouse a manito */
+    margin-right: 40px;        /* Aleja del perfil */
+    color: #fff;
+}
+.bi-person-circle {
+    font-size: 35px;           /* Tamaño del ícono de perfil */
+    cursor: pointer;           /* Manito al pasar el mouse */
+    margin-right: 20px;        /* Un poco de espacio derecho */
+}
+.dropdown-content {
+    position: absolute;        /* Posiciona debajo del ícono */
+    top: 100%;                 /* Lo pone justo abajo del ícono */
+    right: 0;                  /* Pegado al borde derecho */
+    background-color: #193013;/* Mismo verde del navbar */
+    min-width: 160px;          /* Ancho mínimo del menú desplegable */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Sombra para destacar */
+    z-index: 1;                /* Aparece sobre otros elementos */
+    display: none;             /* Oculto por defecto */
+    flex-direction: column;   /* Vertical */
+}
+.dropdown-content a {
+    color: #fff;              /* Texto negro */
+    padding: 12px 16px;        /* Espaciado interno */
+    text-decoration: none;     /* Quita subrayado */
+    display: block;            /* Toda el área clickeable */
+}
+.dropdown:hover .dropdown-content {
+    display: flex;             /* Al pasar el mouse muestra el menú */
 }
 
 main {
-  padding: 20px;
+  padding-top: 70px;
+  padding-left: 66px;
+  padding-right: 66px;
 }
 
 .card {
@@ -69,9 +152,9 @@ main {
 }
 
 .info-columns {
-  display: flex;
-  justify-content: space-between;
+  display: flex; 
   margin-top: 10px;
+
 }
 
 .info-columns button {
@@ -94,7 +177,9 @@ main {
   margin: 10px auto;
   padding: 15px;
   max-width: 800px;
+  
   border-radius: 5px;
+  text-align: start;
 }
 
 .calificacion {
@@ -109,35 +194,309 @@ main {
 
 .volver {
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 8px 16px;
   border: 1px solid #444;
   background-color: white;
   cursor: pointer;
 }
-
 footer {
-  background-color: #4caf50;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  margin-top: 40px;
-  color: black;
-  font-size: 14px;
+    display: flex;                         /* Usa Flexbox para alinear los elementos internos en fila */
+    flex-wrap: wrap;                       /* Permite que los elementos bajen a otra línea si no caben */
+    justify-content: space-around;        /* Distribuye espacio alrededor de los elementos */
+    align-items: center;                  /* Centra verticalmente los elementos */
+    background-color: #319101;           /* Color de fondo verde */
+    padding: 30px 0;                      /* Espaciado arriba y abajo de 30px */
 }
-
-.footer-left,
-.footer-center,
-.footer-right {
-  flex: 1;
-  text-align: center;
+.footer-section {
+    flex: 1;                              /* Cada sección ocupa el mismo espacio disponible */
+    text-align: center;                  /* Centra el texto dentro de la sección */
+    margin: 10px;                         /* Espacio alrededor de cada sección */
+} 
+.footer-section h3 {
+    margin-bottom: 10px;                 /* Espacio debajo del título h3 */
+    color: #fff;                          /* Color del texto oscuro */
+} 
+.footer-icons a {
+    margin: 0 10px;                      /* Espacio horizontal entre íconos */
+    font-size: 24px;                     /* Tamaño de los íconos */
+    color: #fff;                         /* Color negro */
+    transition: color 0.3s ease;         /* Transición suave al cambiar color */
 }
-
-.footer-right a {
-  display: block;
-  margin: 3px 0;
+.footer-icons a:hover {
+    color:  #A4B65B;                     /* Color verde al pasar el cursor */
 }
+.ecoaventura {
+    width: 120px;                        /* Ancho fijo de la imagen */
+}
+.footer-links {
+    list-style: none;                   /* Quita los puntos de las listas */
+    padding: 0;                         /* Quita el espacio interno */
+}
+.footer-links li {
+    margin: 5px 0;                      /* Espacio vertical entre ítems */
+}
+.footer-links a {
+    text-decoration: none;             /* Quita el subrayado */
+    color: #fff;                        /* Color gris oscuro */
+}
+.footer-links a:hover {
+    color: #A4B65B;                     /* Cambia a blanco al pasar el cursor */
+}
+  
 
 .sena{
   width: 48px;
   height: 49px;
+}
+
+@media screen and (max-width: 1440px) { 
+  .info{
+      width: 65%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .info{
+      width: 50%;
+      
+  }
+  .buttons{
+      margin-top: 0;
+  }
+}
+/* 🌐 RESPONSIVE MEJORADO PARA MÓVILES */
+@media screen and (max-width: 768px) {
+  .ecolugar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin: 10px auto;
+    width: 95%;
+  }
+
+  .img_lugar {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+
+  .img_lugar img {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .info {
+    width: 100%;
+    padding: 0;
+  }
+
+  .description {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 10px;
+    gap: 8px;
+    margin-top: 0;
+  }
+
+  #btn {
+    flex: 1 1 40%;
+    min-width: 120px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .guardar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+
+  .bi {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;         /* Cambia la dirección de los elementos a columna */
+      align-items: flex-start;        /* Alinea los elementos al inicio (izquierda) */
+      gap: 15px;                      /* Espacio vertical entre elementos */
+  }
+  .nav-links {
+      flex-direction: column;        /* Menú vertical */
+      width: 100%;                   /* Ocupa todo el ancho disponible */
+      gap: 10px;                     /* Espacio entre enlaces */
+  }
+  .menu-toggle {
+      display: block;                /* Muestra el ícono de menú hamburguesa */
+  }
+  .footer-section {
+      flex: 100%;                    /* Ocupa todo el ancho disponible */
+      margin: 15px 0;                /* Espacio arriba y abajo */
+  }
+  .logo-container {
+      justify-content: center;      /* Centra horizontalmente logo y texto */
+      width: 100%;                   /* Ocupa todo el ancho disponible */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links .menu,
+  .nav-links .lupa,
+  .nav-links .dropdown {
+      display: none;                /* Oculta todos estos elementos por defecto */
+  } 
+  .footer-section:last-child {
+      display: none;               /* Oculta la última sección del footer */
+  }
+}
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;                /* Oculta todo el menú por defecto */
+      flex-direction: column;      /* Los ítems se apilan verticalmente */
+      background: #39A900;        /* Fondo verde */
+      width: 100%;                 /* Ocupa todo el ancho */
+      padding: 10px 0;             /* Espaciado vertical */
+  }
+  .nav-links.active {
+      display: flex;               /* Muestra el menú cuando se le agrega la clase "active" con JS */
+  }
+  .menu-toggle {
+      display: block;              /* Muestra el icono hamburguesa */
+      font-size: 28px;             /* Tamaño grande */
+      cursor: pointer;             /* Cambia a manito al pasar el cursor */
+  }
+  .lupa, .dropdown, .menu {
+      text-align: center;          /* Centra el texto o icono */
+      margin: 10px 0;              /* Espaciado vertical */
+      right: 50px;                 /* (este no aplica si no es position absolute o fixed) */
+      right: 0;                    /* (sobrescribe la anterior línea) */
+  }
+  /* Oculta por defecto los ítems del menú */
+  .menu, .lupa, .dropdown {
+      display: none;
+  }
+  /* Al desplegar el menú, se muestran nuevamente */
+  .nav-links.active .menu,
+  .nav-links.active .lupa,
+  .nav-links.active .dropdown {
+      display: block;
+  }
+}
+
+.lugar1{
+  padding-right: 20px;
+} 
+
+.link_santuario{
+  color: #000;
+}
+
+.comentarios-container {
+  margin-top: 30px;
+}
+
+.comentario {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+/* Formulario de comentarios */
+#comentario-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+#comentario-form input,
+#comentario-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#comentario-form button {
+  padding: 10px 20px;
+  background-color: #319101;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#comentario-form button:hover {
+  background-color: #276e00;
+}
+
+/* Comentarios */
+.comentario {
+  background-color: #d6eecd;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.comentario strong {
+  font-size: 18px;
+  color: #193013;
+}
+
+.comentario p {
+  margin: 8px 0; 
+  font-size: 16px;
+}
+
+/* Estrellas */
+.estrellas {
+  font-size: 24px;
+  color: #ffc107;
+  user-select: none;
+  margin-bottom: 10px;
+}
+
+/* Botón eliminar */
+.comentario button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.comentario button:hover {
+  background-color: #c9302c;
+}
+
+h1{
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  margin-top: 20px;
 }
