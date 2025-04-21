@@ -104,6 +104,7 @@ ul {
     font-size: 35px;           /* Tamaño del ícono de perfil */
     cursor: pointer;           /* Manito al pasar el mouse */
     margin-right: 20px;        /* Un poco de espacio derecho */
+    color: #fff;
 }
 .dropdown-content {
     position: absolute;        /* Posiciona debajo del ícono */
@@ -447,6 +448,7 @@ footer {
     }
     .menu-toggle {
         display: block;                /* Muestra el ícono de menú hamburguesa */
+        color: #fff;
     }
     .footer-section {
         flex: 100%;                    /* Ocupa todo el ancho disponible */
