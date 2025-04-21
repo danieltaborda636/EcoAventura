@@ -65,7 +65,7 @@
 
   @media (max-width: 768px) {
     .info-section {
-      margin-bottom: 20px;
+      
       flex-direction: column;
       text-align: center;
     }
