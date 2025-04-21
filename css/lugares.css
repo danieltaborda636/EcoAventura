@@ -400,3 +400,103 @@ footer {
 .lugar1{
   padding-right: 20px;
 } 
+
+.link_santuario{
+  color: #000;
+}
+
+.comentarios-container {
+  margin-top: 30px;
+}
+
+.comentario {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+/* Formulario de comentarios */
+#comentario-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+#comentario-form input,
+#comentario-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#comentario-form button {
+  padding: 10px 20px;
+  background-color: #319101;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#comentario-form button:hover {
+  background-color: #276e00;
+}
+
+/* Comentarios */
+.comentario {
+  background-color: #d6eecd;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.comentario strong {
+  font-size: 18px;
+  color: #193013;
+}
+
+.comentario p {
+  margin: 8px 0; 
+  font-size: 16px;
+}
+
+/* Estrellas */
+.estrellas {
+  font-size: 24px;
+  color: #ffc107;
+  user-select: none;
+  margin-bottom: 10px;
+}
+
+/* Botón eliminar */
+.comentario button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.comentario button:hover {
+  background-color: #c9302c;
+}
+
+h1{
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  margin-top: 20px;
+}
