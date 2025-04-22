@@ -325,6 +325,9 @@ ul {
 }
 /* 🌐 RESPONSIVE MEJORADO PARA MÓVILES */
 @media screen and (max-width: 768px) {
+    .introduccion h1{
+        font-size: 4rem;
+    }
     .ecolugar {
       flex-direction: column;
       align-items: center;
