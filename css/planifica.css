@@ -20,7 +20,7 @@ text-align: left;
 display: flex;
 flex-wrap: wrap;
 padding: 40px 20px;
-background-color: #eee;
+background-color: #eafde6;
 justify-content: center;
 align-items: center;
 }
@@ -49,14 +49,17 @@ margin-bottom: 20px;
 
 .btn {
 padding: 10px 20px;
-background: #ddd;
+background: #86d177;
 border: none;
 border-radius: 10px;
 cursor: pointer;
+text-decoration: none;
+color: #fff;
 }
 
 .places {
 padding: 40px 20px;
+background-color: #bfe7b7bb;
 }
 
 .places h2 {
