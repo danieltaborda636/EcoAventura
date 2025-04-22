@@ -526,3 +526,46 @@ h1{
 .boton-volver:hover {
   background-color: #1b5e20;
 }
+
+.contenedor {
+  display: flex;
+  margin-top: 1px;
+  justify-content: center;
+  align-items: center;
+  height: 50%; /* Centrado vertical */
+  background: #ffffff;
+}
+
+.slider {
+  width: 2500px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(800px * 6); /* Número de imágenes * ancho */
+  animation: scroll 18s linear infinite;
+  height: 400px;
+}
+
+.slide {
+  width: 400px;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-800px); }
+  66% { transform: translateX(-1600px); }
+  100% { transform: translateX(-2400px); }
+}
