@@ -69,7 +69,6 @@ ul {
 }
 .nav-links {
     display: flex;             /* Menú horizontal */
-    align-items: center;       /* Centra verticalmente */
     list-style: none;          /* Quita los puntos de lista */
 }
 .nav-center {
@@ -326,6 +325,9 @@ ul {
 }
 /* 🌐 RESPONSIVE MEJORADO PARA MÓVILES */
 @media screen and (max-width: 768px) {
+    .introduccion h1{
+        font-size: 4rem;
+    }
     .ecolugar {
       flex-direction: column;
       align-items: center;
@@ -448,7 +450,6 @@ footer {
     }
     .menu-toggle {
         display: block;                /* Muestra el ícono de menú hamburguesa */
-        color: #fff;
     }
     .footer-section {
         flex: 100%;                    /* Ocupa todo el ancho disponible */
@@ -456,7 +457,6 @@ footer {
     }
     .logo-container {
         justify-content: center;      /* Centra horizontalmente logo y texto */
-        width: 100%;                   /* Ocupa todo el ancho disponible */
     }
 }
   
@@ -485,6 +485,7 @@ footer {
         display: block;              /* Muestra el icono hamburguesa */
         font-size: 28px;             /* Tamaño grande */
         cursor: pointer;             /* Cambia a manito al pasar el cursor */
+        color: #fff;
     }
     .lupa, .dropdown, .menu {
         text-align: center;          /* Centra el texto o icono */

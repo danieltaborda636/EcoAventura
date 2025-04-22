@@ -14,22 +14,18 @@ function mostrarComentario({ id, nombre, texto, estrellas }) {
   comentarioDiv.classList.add("comentario");
   comentarioDiv.dataset.id = id;
 
-  // Nombre en negrita
   const nombreElem = document.createElement("strong");
   nombreElem.textContent = nombre;
   comentarioDiv.appendChild(nombreElem);
 
-  // Texto del comentario
   const comentarioP = document.createElement("p");
   comentarioP.textContent = texto;
   comentarioDiv.appendChild(comentarioP);
 
-  // Mostrar estrellas actuales
   const estrellasSpan = document.createElement("span");
   actualizarEstrellas(estrellasSpan, estrellas);
   comentarioDiv.appendChild(estrellasSpan);
 
-  // Botón de calificar
   const btnCalificar = document.createElement("button");
   btnCalificar.textContent = "⭐ Calificar";
   btnCalificar.type = "button";

@@ -53,7 +53,7 @@ ul {
     text-decoration: none;     /* Quita el subrayado del link */
 }
 .logo-text:hover {
-    color: #A4B65B;            /* Cambia el color al pasar el mouse por encima */
+    color: #319101;            /* Cambia el color al pasar el mouse por encima */
 }
 .menu-toggle {
     position: absolute;        /* Se posiciona de forma independiente dentro del contenedor */
@@ -88,7 +88,7 @@ ul {
     display: block;            /* Se comporta como bloque para captar bien el clic */
 }
 .nav-links li a:hover {
-    color: #A4B65B;              /* Al pasar el mouse cambia a blanco */
+    color: #319101              /* Al pasar el mouse cambia a blanco */
 }
 .lupa {
     font-size: 20px;           /* Tamaño del ícono de lupa */
@@ -129,7 +129,7 @@ main {
 }
 
 .card {
-  background-color: #82c96d;
+  background-color: #319101;
   padding: 15px;
   border-radius: 5px;
   display: flex;
@@ -372,7 +372,7 @@ footer {
   .nav-links {
       display: none;                /* Oculta todo el menú por defecto */
       flex-direction: column;      /* Los ítems se apilan verticalmente */
-      background: #39A900;        /* Fondo verde */
+      background: #319101;        /* Fondo verde */
       width: 100%;                 /* Ocupa todo el ancho */
       padding: 10px 0;             /* Espaciado vertical */
   }
@@ -525,4 +525,47 @@ h1{
 
 .boton-volver:hover {
   background-color: #1b5e20;
+}
+
+.contenedor {
+  display: flex;
+  margin-top: 1px;
+  justify-content: center;
+  align-items: center;
+  height: 50%; /* Centrado vertical */
+  background: #ffffff;
+}
+
+.slider {
+  width: 2500px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(800px * 6); /* Número de imágenes * ancho */
+  animation: scroll 18s linear infinite;
+  height: 400px;
+}
+
+.slide {
+  width: 400px;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-800px); }
+  66% { transform: translateX(-1600px); }
+  100% { transform: translateX(-2400px); }
 }
