@@ -53,7 +53,7 @@ ul {
     text-decoration: none;     /* Quita el subrayado del link */
 }
 .logo-text:hover {
-    color: #A4B65B;            /* Cambia el color al pasar el mouse por encima */
+    color: #319101;            /* Cambia el color al pasar el mouse por encima */
 }
 .menu-toggle {
     position: absolute;        /* Se posiciona de forma independiente dentro del contenedor */
@@ -88,7 +88,7 @@ ul {
     display: block;            /* Se comporta como bloque para captar bien el clic */
 }
 .nav-links li a:hover {
-    color: #A4B65B;              /* Al pasar el mouse cambia a blanco */
+    color: #319101              /* Al pasar el mouse cambia a blanco */
 }
 .lupa {
     font-size: 20px;           /* Tamaño del ícono de lupa */
@@ -129,7 +129,7 @@ main {
 }
 
 .card {
-  background-color: #82c96d;
+  background-color: #319101;
   padding: 15px;
   border-radius: 5px;
   display: flex;
@@ -372,7 +372,7 @@ footer {
   .nav-links {
       display: none;                /* Oculta todo el menú por defecto */
       flex-direction: column;      /* Los ítems se apilan verticalmente */
-      background: #39A900;        /* Fondo verde */
+      background: #319101;        /* Fondo verde */
       width: 100%;                 /* Ocupa todo el ancho */
       padding: 10px 0;             /* Espaciado vertical */
   }
