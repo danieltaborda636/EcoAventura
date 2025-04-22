@@ -284,25 +284,32 @@ section .subtitulo {
 
 
 
-
-
-
-/*aqui creare lo del mapa interactivo*/
-#mapa_Risaralda {
-  display: flex; /* Activamos flexbox */
-  justify-content: center; /* Centramos horizontalmente */
-  align-items: center; /* Centramos verticalmente */
-  height: 1000px; /* Altura del contenedor igual a la imagen */
-  margin: 0px;
+/* Estilo para el contenedor que envuelve todo */
+#container {
+  display: flex;
+  flex-direction: column; /* Para apilar el título y el mapa en columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+  text-align: center; /* Opcional: para centrar el texto del título */
 }
 
-/* Imagen del mapa */
-#mapa {
-  width: 80%;
-  height: 800px; /* Mantiene la proporción del mapa */
-  padding: 20px;
-  margin: 0px;
+/* Estilo para el mapa */
+#map {
+  height: 600px;
+  width: 80%; /* Ajusta el tamaño del mapa según sea necesario */
+  z-index: 99;
 }
+
+.popup-custom img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+
 
 /*contenedor del carrocel de los lugares*/
 .titulo_lugares{
@@ -400,14 +407,14 @@ section .subtitulo {
 
 /* Estilos para el contenedor de las tarjetas */
 .carousel-wrapper {
-    width: 1140px; /* Ocupa el 70% del ancho del contenedor del carrusel */
+    width: 1200px; 
 }
 
 /* Estilos para el grupo de tarjetas */
 .card-group {
     display: flex; /* Utiliza flexbox para organizar las tarjetas en fila */
     transition: transform 0.5s ease-in-out; /* Agrega una transición suave al desplazamiento */
-    padding: 34.5px; /* Espacio para que se vean las cartas adyacentes */
+    padding: 40.5px; /* Espacio para que se vean las cartas adyacentes */
 }
 
 /* Estilos para cada tarjeta */

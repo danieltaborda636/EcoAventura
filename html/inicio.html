@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> <!--del mapa-->
 
     <link rel="stylesheet" href="../css/inicio.css">
     <title>Inicio ecoaventura</title>
@@ -35,8 +36,26 @@
             <ul class="nav-links">
                 <div class="nav-center">
                 <li class="menu"><a href="./inicio.html">Inicio</a></li>
-                <li class="menu"><a href="./inicio.html#slider-container">Planifica tu viaje</a></li>
-                <i class="lupa bi-search"></i>
+                <li class="menu"><a href="./planifica.html">Planifica tu viaje</a></li>
+                <li class="dropdown">
+                    <i class="lupa bi-search"></i>
+                    <div class="dropdown-content">
+                        <a href="/html/m_dosquebradas.html">Dosquebradas</a>
+                        <a href="/html/m_pereira.html">pereira</a>
+                        <a href="/html/m_santaRosa.html">santarosa</a>
+                        <a href="/html/m_laVirginia.html">La Virginia</a>
+                        <a href="/html/m_marsella.html">Marsella</a>
+                        <a href="/html/m_mistrato.html">mistrato</a>
+                        <a href="/html/m_balboa.html">balboa</a>
+                        <a href="/html/m_laCelia.html">La celia</a>
+                        <a href="/html/m_guatica.html">Guatica</a>
+                        <a href="/html/m_puebloRico.html">Pueblo rico</a>
+                        <a href="/html/m_quinchia.html">Quinchia</a>
+                        <a href="/html/m_belen.html">Belen de umbria</a>
+                        <a href="/html/m_apia.html">Apia</a>
+                        <a href="/html/m_santuario.html">Santuario</a>
+                    </div>
+                </li>
                 </div>
                 
                 <!-- Este queda a la derecha -->
@@ -86,10 +105,18 @@
 
 
 <!--el mapa interactivo de cada municipio-->
-     <section class="introduccion">
-        <div id="mapa_Risaralda"><img id="mapa" src="../img/Departamento-Risaralda-de-Colombia-5-600x645.jpg"></div>
-       
-     </section>
+<div id="container">
+    <h2>Mapa de Ecoturismo</h2>
+    <div id="map"></div>
+</div>
+
+
+
+
+
+
+
+
 
 <!--carrocel de algunos lugares eco -->
 <h1 class="titulo_lugares">LUGARES</h1>
@@ -352,12 +379,14 @@
             <li><a href="./index.html ">Inicio</a></li>
             <li><a href="./preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
             <li><a href="./registroSocio.html">Haz parte de nosotros</a></li>
-            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="./sobre_nosotros.html">Sobre Nosotros</a></li>
             <li><a href="./terminosycondiciones.html">Terminos y condiciones </a></li>
         </ul>
     </div>
 </footer>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="../js/barraNavegacion.js"></script>
 <script src="../js/inicio.js"></script>
+<script src="../js/mapa.js"></script>
 </body>
 </html>
