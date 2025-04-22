@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../css/municipios.css">
   <link rel="stylesheet" href="../css/usuarios.css">
+  <link rel="stylesheet" href="../css/planifica.css">
   
   
 </head>
@@ -137,7 +138,27 @@
         <h2>Mis Favoritos</h2>
         <div class="favoritos-scroll">
           <div class="favoritos-placeholder">
-            Aquí se mostrarán los lugares guardados por el usuario.
+            <div class="card">
+              <a href="../html/info_parque_cometa.html"><img src="../img/virginia.jpg" alt="Lugar 1"></a>
+              <h3>Parque Mirador Las Cometas</h3>
+              <div class="location">
+                <span>La Virginia, Risaralda</span>
+              </div>
+              <div class="stars" data-score="0">
+                <span class="star" onclick="rate(this, 1)">&#9733;</span>
+                <span class="star" onclick="rate(this, 2)">&#9733;</span>
+                <span class="star" onclick="rate(this, 3)">&#9733;</span>
+                <span class="star" onclick="rate(this, 4)">&#9733;</span>
+                <span class="star" onclick="rate(this, 5)">&#9733;</span>
+                <span class="rating-count">0 estrellas</span>
+              </div>
+            
+              <!-- Ícono de guardar favorito -->
+              <div class="favorite-icon">
+                <i class="bi-bookmark"></i>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>

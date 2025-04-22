@@ -27,3 +27,9 @@ function mostrarSeccion(id) {
       preview.style.display = 'none';
     }
   }
+
+  
+  
+  function toggleFavorite(element) {
+    element.classList.toggle("active");
+  }

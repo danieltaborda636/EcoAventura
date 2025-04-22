@@ -109,3 +109,23 @@ body {
     text-align: center;
     border-radius: 10px;
   }
+  
+  .card {
+    position: relative; /* Necesario para posicionar el ícono */
+  }
+  
+  .favorite-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .favorite-icon:hover {
+    color: #A4B65B; /* Cambia a verde al pasar el cursor */
+  }
+  
+  
