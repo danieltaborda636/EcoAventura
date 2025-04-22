@@ -309,9 +309,13 @@ ul {
     margin-top: 150px; /* 👈 esto crea espacio entre texto y botones */
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1540px) {
     .info{
-        width: 65%;
+        width: 50%;
+        
+    }
+    .buttons{
+        margin-top: 0;
     }
 }
 @media screen and (max-width: 1024px) {

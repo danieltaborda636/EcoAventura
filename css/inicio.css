@@ -485,10 +485,13 @@ section .subtitulo {
 }
 
 .infos {
-
+color: #000;
   padding: 15px;
   flex-grow: 1;  /* Ocupa el espacio disponible */
  
+}
+.celia{
+  color: #000;
 }
 
 
