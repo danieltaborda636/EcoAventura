@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajuste de Usuario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/usuarios.css">
+  <link rel="stylesheet" href="../css/municipios.css">
+  
+</head>
+<body>
+     <!-- HEADER CON BARRA DE NAVEGACIÓN -->
+     <section class="seccionLogueo">
+        <header id="barra">
+            <div class="navbar">
+                <div class="logo-container">
+                    <img class="sena" src="../img/sena-blanco.svg">
+                
+                    <div class="separator"></div>
+                
+                    <a class="logo-text" href="./inicio.html">EcoAventura</a>
+                </div>
+                <div class="menu-toggle">&#9776;</div> <!-- Ícono de menú hamburguesa -->
+                <ul class="nav-links">
+                    <div class="nav-center">
+                    <li class="menu"><a href="./inicio.html">Inicio</a></li>
+                    <li class="menu"><a href="./inicio.html#slider-container">Planifica tu viaje</a></li>
+                    <i class="lupa bi-search"></i>
+                    </div>
+                    
+                    <!-- Este queda a la derecha -->
+                    <li class="dropdown">
+                        <i class="bi bi-person-circle dropbtn"></i>
+                        <div class="dropdown-content">
+                            <a href="#">ID</a>
+                            <a href="#">Seguridad</a>
+                            <a href="#">Mis Favoritos</a>
+                        </div>
+                    </li>
+                </ul> 
+            </div>
+        </header>
+    </section>
+
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="user-icon">
+        <div>👤</div>
+        <p>Usuario</p>
+      </div>
+      <ul>
+        <li class="active" onclick="mostrarSeccion('cuenta')">Cuenta</li>
+        <li onclick="mostrarSeccion('contrasena')">Contraseña</li>
+        <li onclick="mostrarSeccion('seguridad')">Seguridad</li>
+        <li onclick="mostrarSeccion('favoritos')">Mis Favoritos</li>
+        <li onclick="mostrarSeccion('operadores')">Operadores</li>
+      </ul>
+    </div>
+
+    <div class="content" id="contenido">
+      <!-- Sección Cuenta -->
+      <div id="cuenta">
+        <h2>Ajuste de Cuenta</h2>
+        <div class="form-group">
+          <label>Nombres</label>
+          <input type="text" placeholder="Nombre" />
+        </div>
+        <div class="form-group">
+          <label>Apellidos</label>
+          <input type="text" placeholder="Apellido" />
+        </div>
+        <div class="form-group">
+          <label>Correo Electronico</label>
+          <input type="email" value="correoelectronico@gmail.com" />
+        </div>
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input type="text" value="+57323458703" />
+        </div>
+        <div class="form-group">
+          <label>País</label>
+          <img src="https://flagcdn.com/w40/co.png" alt="Colombia" />
+        </div>
+        <div class="btn-group">
+          <button>Actualizar</button>
+          <button>Cancelar</button>
+        </div>
+      </div>
+
+      <!-- Sección Contraseña -->
+      <div id="contrasena" style="display:none">
+        <h2>Ajuste de Contraseña</h2>
+        <div class="form-group">
+          <label>Antigua Contraseña</label>
+          <input type="password" value="********" />
+        </div>
+        <div class="form-group">
+          <label>Nueva Contraseña</label>
+          <input type="password" value="********" />
+        </div>
+        <div class="form-group">
+          <label>Confirmar Contraseña</label>
+          <input type="password" value="********" />
+        </div>
+        <div class="btn-group">
+          <button>Actualizar</button>
+          <button>Cancelar</button>
+        </div>
+      </div>
+
+      <!-- Sección Seguridad -->
+      <div id="seguridad" style="display:none">
+        <h2>Ajuste de Seguridad</h2>
+        <div class="form-group">
+          <label>Correo Alternativo</label>
+          <input type="email" value="correo2@gmail.com" />
+        </div>
+        <div class="form-group">
+          <label>Seguridad de 2 Pasos</label>
+          <input type="password" value="********" />
+        </div>
+        <div class="btn-group">
+          <button>Actualizar</button>
+          <button>Cancelar</button>
+        </div>
+      </div>
+
+      <!-- Sección Favoritos -->
+      <div id="favoritos" style="display:none">
+        <h2>Mis Favoritos</h2>
+        <div class="favoritos-scroll">
+          <div class="favoritos-placeholder">
+            Aquí se mostrarán los lugares guardados por el usuario.
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección Operadores -->
+      <div id="operadores" style="display:none">
+        <h2>Gestión de Operadores</h2>
+
+        <div class="form-group">
+          <label>Nombre del lugar</label>
+          <input type="text" placeholder="Ej: Parque Central, Café Bar..." />
+        </div>
+
+        <div class="form-group">
+          <label>Horarios</label>
+          <input type="text" placeholder="Ej: Lunes a Viernes, 8am - 6pm" />
+        </div>
+
+        <div class="form-group">
+          <label>Subir imagen del lugar</label>
+          <input type="file" accept="image/*" onchange="mostrarVistaPrevia(this)" />
+          <div id="preview" style="margin-top: 15px;">
+            <img id="preview-img" src="" alt="Vista previa" style="max-width: 100%; display: none; border-radius: 10px; border: 1px solid #ccc;" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Descripción del lugar</label>
+          <textarea rows="4" placeholder="Escribe una breve descripción..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Ubicación</label>
+          <input type="text" placeholder="Ciudad, Dirección o Coordenadas" />
+        </div>
+
+        <div class="btn-group">
+          <button>Guardar</button>
+          <button>Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/usuarios.js"></script>
+  <script src="../js/barraNavegacion.js"></script>
+</body>
+</html>
