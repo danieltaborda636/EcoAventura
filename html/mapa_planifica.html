@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planifica tu viaje</title>
+  <link rel="stylesheet" href="../css/mapa_planifica.css" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>Comienza a<br>Planificar tu viaje</h1>
+      <p class="description">
+        <strong>Bienvenido a tu guía ecoturística personalizada.</strong><br>
+        <a href="#">Explora la naturaleza de forma responsable</a> y <a href="#">disfruta de los mejores destinos ecológicos.</a>
+      </p>
+
+      <div class="form-group">
+        <label for="municipio">📍 Municipio</label>
+        <input type="text" id="municipio" placeholder="Busca entre los Municipios" />
+      </div>
+
+      <div class="form-group">
+        <label for="inicio">📅 Fecha de inicio</label>
+        <input type="date" id="inicio" />
+      </div>
+
+      <div class="form-group">
+        <label for="fin">📅 Fecha de fin</label>
+        <input type="date" id="fin" />
+      </div>
+
+      <div class="form-group">
+        <label for="tipo">🏞️ Tipo de destino</label>
+        <select id="tipo">
+          <option value="">Selecciona una opción</option>
+          <option value="montaña">Montaña</option>
+          <option value="bosque">Bosque</option>
+          <option value="río">Río</option>
+          <option value="pueblo">Pueblo</option>
+        </select>
+      </div>
+
+      <button id="buscarBtn">🔍 Buscar</button>
+    </div>
+
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="../js/mapa_planifica.js"></script>
+</body>
+</html>

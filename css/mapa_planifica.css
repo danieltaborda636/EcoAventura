@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    
+    flex-direction: row;
+  }
+  
+  .sidebar {
+    background-color: #c4c4c4;
+    width: 40%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sidebar h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .description a {
+    color: #000080;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+  }
+  
+  .form-group input,
+  .form-group select {
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  #buscarBtn {
+    background-color: white;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.7rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    align-self: center;
+    width: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  #btn{
+    text-decoration: none;
+  }
+  
+  .map-container {
+    width: 60%;
+    height: 100vh;
+  }
+  
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      padding: 1.5rem;
+    }
+  
+    .map-container {
+      width: 100%;
+      height: 50vh;
+    }
+  }
+  
