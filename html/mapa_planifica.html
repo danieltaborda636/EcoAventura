@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planifica tu viaje</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/mapa_planifica.css" />
+  <link rel="stylesheet" href="../css/municipios.css">
+
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+     <!-- HEADER CON BARRA DE NAVEGACIÓN -->
+     <section class="seccionLogueo">
+        <header id="barra">
+            <div class="navbar">
+                <div class="logo-container">
+                    <img class="sena" src="../img/sena-blanco.svg">
+                
+                    <div class="separator"></div>
+                
+                    <a class="logo-text" href="./inicio.html">EcoAventura</a>
+                </div>
+                <div class="menu-toggle">&#9776;</div> <!-- Ícono de menú hamburguesa -->
+                <ul class="nav-links">
+                    <div class="nav-center">
+                    <li class="menu"><a href="./inicio.html">Inicio</a></li>
+                    <li class="menu"><a href="./inicio.html#slider-container">Planifica tu viaje</a></li>
+                    <i class="lupa bi-search"></i>
+                    </div>
+                    
+                    <!-- Este queda a la derecha -->
+                    <li class="dropdown">
+                        <i class="bi bi-person-circle dropbtn"></i>
+                        <div class="dropdown-content">
+                            <a href="#">ID</a>
+                            <a href="#">Seguridad</a>
+                            <a href="#">Mis Favoritos</a>
+                        </div>
+                    </li>
+                </ul> 
+            </div>
+        </header>
+    </section>
+
+
+
+
+
+
+  <div class="container">
+    <div class="sidebar">
+      <h1>Comienza a<br>Planificar tu viaje</h1>
+      <p class="description">
+        <strong>Bienvenido a tu guía ecoturística personalizada.</strong><br>
+        Explora la naturaleza de forma responsable y disfruta de los mejores destinos ecológicos.
+      </p>
+
+      <div class="form-group">
+        <label for="municipio">📍 Municipio</label>
+        <input type="text" id="municipio" placeholder="Busca entre los Municipios" />
+      </div>
+
+      <div class="form-group">
+        <label for="inicio">📅 Fecha de inicio</label>
+        <input type="date" id="inicio" />
+      </div>
+
+      <div class="form-group">
+        <label for="fin">📅 Fecha de fin</label>
+        <input type="date" id="fin" />
+      </div>
+
+      <div class="form-group">
+        <label for="tipo">🏞️ Tipo de destino</label>
+        <select id="tipo">
+          <option value="">Selecciona una opción</option>
+          <option value="montaña">Montaña</option>
+          <option value="bosque">Bosque</option>
+          <option value="río">Río</option>
+          <option value="pueblo">Pueblo</option>
+        </select>
+      </div>
+
+      <button id="buscarBtn">🔍 Buscar</button>
+    </div>
+
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
+  </div>
+
+
+   <!--inicio del footer-->
+   <footer>
+    <div class="footer-section">
+        <h3 id="arreglando">Redes Sociales</h3>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <img class="ecoaventura" src="../img/logo del proyecto.png" alt="logo de EcoAventura">
+    </div>
+
+    <div class="footer-section">
+        <ul class="footer-links">
+            <li><a href="./index.html ">Inicio</a></li>
+            <li><a href="./preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+            <li><a href="./registroSocio.html">Haz parte de nosotros</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="./terminosycondiciones.html">Terminos y condiciones </a></li>
+        </ul>
+    </div>
+</footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="../js/mapa_planifica.js"></script>
+</body>
+</html>

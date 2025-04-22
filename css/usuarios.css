@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9f5e3;
+    height: 100vh;
+  }
+  #barra{
+    position: relative;
+  }
+  .container {
+    display: flex;
+    height: 100%;
+  }
+
+  .sidebar {
+    width: 250px;
+    background-color: #60bd32;
+    border-right: 1px solid #ccc;
+    padding-top: 20px;
+  }
+
+  .sidebar .user-icon {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .sidebar .user-icon div {
+    width: 70px;
+    height: 70px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .sidebar ul li:hover,
+  .sidebar ul li.active {
+    background-color: #e9f5e3;
+  }
+
+  .content {
+    flex-grow: 1;
+    padding: 40px;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .btn-group {
+    margin-top: 20px;
+  }
+
+  .btn-group button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+
+  .favoritos-scroll {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .favoritos-placeholder {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
