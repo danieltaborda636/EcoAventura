@@ -11,23 +11,28 @@
   
   .container {
     display: flex;
-    
     flex-direction: row;
+    z-index: 1;
   }
   
   .sidebar {
-    background-color: #28a745;
+    background-color: #79be89;
     width: 40%;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #000;
+  }
+  .sidebar p{
+    color: #000;
   }
   
   .sidebar h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
+    color: #000;
   }
   
   .description {
@@ -35,6 +40,7 @@
     margin-bottom: 1.5rem;
     text-align: center;
     line-height: 1.5;
+    color: #000;
   }
   
   .description a {
@@ -81,6 +87,7 @@
   .map-container {
     width: 60%;
     height: 100vh;
+    z-index: -1;
   }
   
   #map {
