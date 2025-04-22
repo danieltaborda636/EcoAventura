@@ -222,6 +222,10 @@ ul {
     width: 100%;
     padding: 10px;
 }
+#btn a{
+    text-decoration: none;
+    color: #fff;
+}
 .img_lugar{
     width: 340px;
     height: 340px;
