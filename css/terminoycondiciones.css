@@ -96,6 +96,7 @@ ul {
   color: #fff;
 }
 .bi-person-circle {
+  color: #fff;
   font-size: 35px;           /* Tamaño del ícono de perfil */
   cursor: pointer;           /* Manito al pasar el mouse */
   margin-right: 20px;        /* Un poco de espacio derecho */

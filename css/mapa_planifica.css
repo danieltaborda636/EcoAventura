@@ -8,6 +8,10 @@
     height: 100vh;
     font-family: "Segoe UI", sans-serif;
   }
+  #barra{
+    position: relative;
+    
+  }
   
   .container {
     display: flex;
