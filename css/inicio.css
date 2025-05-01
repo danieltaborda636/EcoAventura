@@ -2,12 +2,12 @@
   padding: 0;                         /* Elimina el espacio interno de todos los elementos */
   margin: 0;                          /* Elimina el espacio externo de todos los elementos */
   box-sizing: border-box;            /* Hace que el padding y border no sumen al ancho/alto */
-  font-family: "Arial", sans-serif;  /* Define la fuente global para todo el sitio */
 }
 body {
   overflow-x: hidden;              /* Evita que se vea scroll horizontal si algo se sale */
   background: #eff1ed;              /* Establece el fondo blanco de toda la página */
   width: 100%;                    /* El ancho del body será del 100% de la pantalla */
+  font-family: "Arial", sans-serif;  /* Define la fuente global para todo el sitio */
   min-height: 100vh;              /* Altura mínima del body será toda la altura visible */
   display: flex;                  /* Activa Flexbox para organizar su contenido */
   flex-direction: column;        /* Los hijos se colocan de arriba hacia abajo */
@@ -273,22 +273,42 @@ section .subtitulo {
   max-width: 900px; /* Limita el ancho del párrafo */
   margin-left: auto; /* Centra el párrafo horizontalmente */
   margin-right: auto; /* Centra el párrafo horizontalmente */
+  padding: 20px;
 }
 
 /* Estilos para pantallas más pequeñas (por debajo de 768px) */
 @media (max-width: 768px) {
-.sobre-nosotros {
-  font-size: 48px; /* Ajusta el tamaño del título en pantallas pequeñas */
-}
+  section .titulo{
+    font-size: 40px;
+  }
+  section .subtitulo{
+    font-size: 40px;
+  }
+  .sobre-nosotros {
+    font-size: 48px; /* Ajusta el tamaño del título en pantallas pequeñas */
+    
+  }
+  .slogan {
+    font-size: 20px; /* Ajusta el tamaño del slogan en pantallas pequeñas */
+  }
 
-.slogan {
-  font-size: 20px; /* Ajusta el tamaño del slogan en pantallas pequeñas */
+  .parrafo {
+    font-size: 16px; /* Ajusta el tamaño del párrafo */
+    margin-bottom: 20px; /* Ajusta el espaciado debajo del párrafo */
+  }
 }
-
-.parrafo {
-  font-size: 16px; /* Ajusta el tamaño del párrafo */
-  margin-bottom: 20px; /* Ajusta el espaciado debajo del párrafo */
-}
+@media (max-width: 630px) {
+  .acerca-de{
+    height: 400px;
+  }
+  .contenedor{
+    width: 90%;
+    height: auto;
+    border: none;
+  }
+  .parrafo{
+    display: none;
+  }
 }
 
 
@@ -308,6 +328,7 @@ section .subtitulo {
   height: 600px;
   width: 80%; /* Ajusta el tamaño del mapa según sea necesario */
   z-index: 99;
+  margin-top: 20px;
 }
 
 .popup-custom img {
@@ -315,7 +336,12 @@ section .subtitulo {
   height: auto;
   border-radius: 10px;
 }
-
+@media (max-width: 630px) {
+  #map{
+    width: 80%;
+    height: 50%;
+  }
+}
 
 
 
@@ -451,12 +477,7 @@ section .subtitulo {
     margin: 0 10px; /* Agrega márgenes laterales */
 }
 
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .carousel-wrapper {
-        width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
-    }
-}
+
 
 /*cartas de los municipios*/
 .titulo_municipio{
@@ -532,7 +553,31 @@ button:hover {
   color: #fff;
 }
 
-
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .carousel-wrapper {
+      width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+  }
+}
+@media (max-width: 768px) {
+  .carousel-wrapper {
+      width: 80%; /* Ajusta el ancho para pantallas más pequeñas */
+  }
+  .titulo_lugares{
+    margin: 70px;
+    font-size: 40px;
+  }
+  .titulo_municipio{
+    font-size: 40px;
+  }
+  .infos h1{
+    font-size: 25px;
+    
+  }
+  .infos a{
+    font-size: 15px;
+  }
+}
 
 
 
@@ -583,7 +628,7 @@ footer {
     color: #373d20;                     /* Cambia a blanco al pasar el cursor */
 }
   
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 798px) {
     .navbar {
         flex-direction: column;         /* Cambia la dirección de los elementos a columna */
         align-items: flex-start;        /* Alinea los elementos al inicio (izquierda) */
@@ -606,7 +651,7 @@ footer {
     }
 }
   
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 798px) {
     .nav-links .menu,
     .nav-links .lupa,
     .nav-links .dropdown {
@@ -616,10 +661,10 @@ footer {
         display: none;               /* Oculta la última sección del footer */
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 798px) {
     .nav-links {
         display: none;                /* Oculta todo el menú por defecto */
-        flex-direction: column;      /* Los ítems se apilan verticalmente */
+        flex-direction: row;      /* Los ítems se apilan verticalmente */
         background: #1c7c54;        /* Fondo verde */
         width: 100%;                 /* Ocupa todo el ancho */
         padding: 10px 0;             /* Espaciado vertical */
