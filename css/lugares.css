@@ -126,14 +126,35 @@ ul {
 }
   
 .lugar-banner {
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url('/img/Adobe\ Express\ -\ file.jpg') center/cover;
-    
-    color: white;
-    padding: 4rem 1rem;
-    height: auto;
-  }
+  text-align: center;
+  color: white;
+  padding: 4rem 1rem;
+  height: 100vh;
+}
+.img1{
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  url('../img/I_rio_otun1.jpg') center/cover;
+}
+.img2{
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  url('../img/I_La_pastora_2.jpg') center/cover;
+}
+.img3{
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  url('../img/I_alto_nudo2.jpg') center/cover;
+}
+.img4{
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  url('../img/I_alto_oso2.jpg') center/cover;
+}
+.img5{
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  url('../img/I_bonita_farm2.jpeg') center/cover;
+}
+.img6{
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  url('../img/I_rio_otun1.jpg') center/cover;
+}
 
 
 .rating-box {
@@ -141,7 +162,13 @@ ul {
   align-items: center;
   gap: 1rem;
   margin: 1rem 0;
-  margin-top: 250px;
+  margin-top: 380px;
+}
+
+@media screen and (max-width: 425px){
+  .rating-box {
+    margin-top: 340px;
+  }
 }
 
 .estrellas {
@@ -170,9 +197,6 @@ ul {
   opacity: 1;
 }
 
-  
-
-  
   .lugar-banner h2 {
     text-align: center;
     margin-top: 33vh;
@@ -210,7 +234,10 @@ ul {
   .tarjeta .contenido {
     padding: 1rem;
   }
-  
+  .contenido li{
+    padding: 0.3rem;
+  }
+
   .tarjeta h3 {
     margin-top: 0;
   }

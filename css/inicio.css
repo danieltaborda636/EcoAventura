@@ -8,6 +8,7 @@ body {
   overflow-x: hidden;              /* Evita que se vea scroll horizontal si algo se sale */
   background: #eff1ed;              /* Establece el fondo blanco de toda la página */
   width: 100%;                    /* El ancho del body será del 100% de la pantalla */
+  font-family: "Arial", sans-serif;  /* Define la fuente global para todo el sitio */
   min-height: 100vh;              /* Altura mínima del body será toda la altura visible */
   display: flex;                  /* Activa Flexbox para organizar su contenido */
   flex-direction: column;        /* Los hijos se colocan de arriba hacia abajo */
@@ -275,6 +276,7 @@ section .subtitulo {
   margin-left: auto; /* Centra el párrafo horizontalmente */
   margin-right: auto; /* Centra el párrafo horizontalmente */
   display: block;
+  padding: 20px;
 }
 .texto-corto {
   display: none;
@@ -284,44 +286,58 @@ section .subtitulo {
 }
 
 /* Estilos para pantallas más pequeñas (por debajo de 768px) */
-@media (max-width: 768px) {
-.sobre-nosotros {
-  font-size: 48px; /* Ajusta el tamaño del título en pantallas pequeñas */
-}
-
-.slogan {
-  font-size: 20px; /* Ajusta el tamaño del slogan en pantallas pequeñas */
-}
-.parrafo {
-  display: none;
-}
-.texto-meniano {
-  display: none;
-}
-
-.texto-corto {
-  display: block;
-  margin: auto 10px;
-  margin-top: 20%;
-}
-
-}
-
 @media (max-width: 1024px) {
 
   .texto-mediano {
     font-size: 24px;         /* Tamaño de texto razonable para móviles/tablets */
   }
+}
 
+@media (max-width: 768px) {
+  section .titulo{
+    font-size: 40px;
+  }
+  section .subtitulo{
+    font-size: 40px;
+  }
+  .sobre-nosotros {
+    font-size: 48px; /* Ajusta el tamaño del título en pantallas pequeñas */
+    
+  }
+  .slogan {
+    font-size: 20px; /* Ajusta el tamaño del slogan en pantallas pequeñas */
+  }
+  .parrafo {
+    display: none;
+  }
+  .texto-meniano {
+    display: none;
+  }
+
+  .texto-corto {
+    display: block;
+    margin: auto 10px;
+    margin-top: 20%;
+  }
   .parrafo,
   .texto-corto {
     display: none;           /* Oculta los otros textos */
   }
 }
 
-
-
-
+@media (max-width: 630px) {
+  .acerca-de{
+    height: 400px;
+  }
+  .contenedor{
+    width: 90%;
+    height: auto;
+    border: none;
+  }
+  .parrafo{
+    display: none;
+  }
+}
 
 /* Estilo para el contenedor que envuelve todo */
 #container {
@@ -338,6 +354,7 @@ section .subtitulo {
   height: 600px;
   width: 80%; /* Ajusta el tamaño del mapa según sea necesario */
   z-index: 99;
+  margin-top: 20px;
 }
 
 .popup-custom img {
@@ -346,8 +363,12 @@ section .subtitulo {
   border-radius: 10px;
 }
 
-
-
+@media (max-width: 630px) {
+  #map{
+    width: 80%;
+    height: 50%;
+  }
+}
 
 /* TÍTULO */
 .titulo_lugares {
@@ -621,11 +642,31 @@ button:hover {
   color: #fff;
 }
 
-
-
-
-
-
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .carousel-wrapper {
+      width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+  }
+}
+@media (max-width: 768px) {
+  .carousel-wrapper {
+      width: 80%; /* Ajusta el ancho para pantallas más pequeñas */
+  }
+  .titulo_lugares{
+    margin: 70px;
+    font-size: 40px;
+  }
+  .titulo_municipio{
+    font-size: 40px;
+  }
+  .infos h1{
+    font-size: 25px;
+    
+  }
+  .infos a{
+    font-size: 15px;
+  }
+}
   
 /*los estilos del footer*/
 footer {
