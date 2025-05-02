@@ -124,67 +124,84 @@ ul {
 .dropdown:hover .dropdown-content {
   display: flex;             /* Al pasar el mouse muestra el menú */
 }
-  .mosaico-videos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-    gap: 5px;
-    padding: 50px;
-    background-color: #eafbe6;
+.mosaico-videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.mosaico-videos iframe {
+  margin: auto;
+  align-items: center;
+  width: 70%;
+  max-width: 640px;
+  height: 360px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.mosaico-videos iframe:hover {
+  transform: scale(1.02);
+}
+
+.faq {
+  background-color: white;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.faq h2 {
+  color: #2a6027;
+  font-size: 28px; /* Tamaño de fuente por defecto */
+}
+
+details {
+  margin-bottom: 15px;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+summary::marker {
+  color: #2a6027;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+  .mosaico-videos iframe {
+    width: 90%;
+    height: 250px;
   }
 
-  .titulo{
-    background-color: #e9f5e3;
-    text-align: center;
-    margin: 25px;
-    font-size: 50px;
-    height: 30px;
-  }
-  .subtitulo{
-    background-color: #e9f5e3;
-    text-align: center;
-    margin: 50px;
-    font-size: 25px;
-    height: 30px;
-  }
-  
-  
-  .mosaico-videos iframe {
-    margin: auto;
-    align-items: center;
-    width: 70%;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .mosaico-videos iframe:hover {
-    transform: scale(1.02);
-  }
-  
   .faq {
-    background-color: white;
-    padding: 20px;
-    max-width: 900px;
-    margin: auto ;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 15px;
   }
-  
+
   .faq h2 {
-    color: #2a6027;
+    font-size: 24px; /* Ajuste del tamaño de fuente para pantallas medianas */
   }
-  
-  details {
-    margin-bottom: 15px;
+}
+
+@media (max-width: 480px) {
+  .mosaico-videos iframe {
+    width: 100%;
+    height: 200px;
   }
-  
+
   summary {
-    font-weight: bold;
-    cursor: pointer;
+    font-size: 16px;
   }
-  
-  summary::marker {
-    color: #2a6027;
+
+  .faq h2 {
+    font-size: 20px; /* Ajuste más pequeño para pantallas pequeñas */
   }
-  
+}
 
 /*los estilos del footer*/
 footer {

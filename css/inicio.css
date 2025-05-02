@@ -2,12 +2,12 @@
   padding: 0;                         /* Elimina el espacio interno de todos los elementos */
   margin: 0;                          /* Elimina el espacio externo de todos los elementos */
   box-sizing: border-box;            /* Hace que el padding y border no sumen al ancho/alto */
+  font-family: "Arial", sans-serif;  /* Define la fuente global para todo el sitio */
 }
 body {
   overflow-x: hidden;              /* Evita que se vea scroll horizontal si algo se sale */
   background: #eff1ed;              /* Establece el fondo blanco de toda la página */
   width: 100%;                    /* El ancho del body será del 100% de la pantalla */
-  font-family: "Arial", sans-serif;  /* Define la fuente global para todo el sitio */
   min-height: 100vh;              /* Altura mínima del body será toda la altura visible */
   display: flex;                  /* Activa Flexbox para organizar su contenido */
   flex-direction: column;        /* Los hijos se colocan de arriba hacia abajo */
@@ -242,9 +242,10 @@ section .subtitulo {
   opacity: 90%;
   width: 80%;
   height: 100%;
-  margin: 30px;
+  margin: 50px;
   border-radius: 20px;
   z-index: 0;
+  padding: 20px;
 }
 /* Estilos para el título "Sobre Nosotros" */
 .sobre-nosotros {
@@ -273,43 +274,52 @@ section .subtitulo {
   max-width: 900px; /* Limita el ancho del párrafo */
   margin-left: auto; /* Centra el párrafo horizontalmente */
   margin-right: auto; /* Centra el párrafo horizontalmente */
-  padding: 20px;
+  display: block;
+}
+.texto-corto {
+  display: none;
+}
+.texto-mediano {
+  display: none;
 }
 
 /* Estilos para pantallas más pequeñas (por debajo de 768px) */
 @media (max-width: 768px) {
-  section .titulo{
-    font-size: 40px;
-  }
-  section .subtitulo{
-    font-size: 40px;
-  }
-  .sobre-nosotros {
-    font-size: 48px; /* Ajusta el tamaño del título en pantallas pequeñas */
-    
-  }
-  .slogan {
-    font-size: 20px; /* Ajusta el tamaño del slogan en pantallas pequeñas */
+.sobre-nosotros {
+  font-size: 48px; /* Ajusta el tamaño del título en pantallas pequeñas */
+}
+
+.slogan {
+  font-size: 20px; /* Ajusta el tamaño del slogan en pantallas pequeñas */
+}
+.parrafo {
+  display: none;
+}
+.texto-meniano {
+  display: none;
+}
+
+.texto-corto {
+  display: block;
+  margin: auto 10px;
+  margin-top: 20%;
+}
+
+}
+
+@media (max-width: 1024px) {
+
+  .texto-mediano {
+    font-size: 24px;         /* Tamaño de texto razonable para móviles/tablets */
   }
 
-  .parrafo {
-    font-size: 16px; /* Ajusta el tamaño del párrafo */
-    margin-bottom: 20px; /* Ajusta el espaciado debajo del párrafo */
+  .parrafo,
+  .texto-corto {
+    display: none;           /* Oculta los otros textos */
   }
 }
-@media (max-width: 630px) {
-  .acerca-de{
-    height: 400px;
-  }
-  .contenedor{
-    width: 90%;
-    height: auto;
-    border: none;
-  }
-  .parrafo{
-    display: none;
-  }
-}
+
+
 
 
 
@@ -328,7 +338,6 @@ section .subtitulo {
   height: 600px;
   width: 80%; /* Ajusta el tamaño del mapa según sea necesario */
   z-index: 99;
-  margin-top: 20px;
 }
 
 .popup-custom img {
@@ -336,47 +345,67 @@ section .subtitulo {
   height: auto;
   border-radius: 10px;
 }
-@media (max-width: 630px) {
-  #map{
-    width: 80%;
-    height: 50%;
-  }
-}
 
 
 
 
-/*contenedor del carrocel de los lugares*/
-.titulo_lugares{
+/* TÍTULO */
+.titulo_lugares {
   text-align: center;
-  margin: 125px;
+  margin: 80px 0;
   font-size: 50px;
-  height: 30px;
 }
 
+/* CONTENEDOR PRINCIPAL */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ENVOLTURA DEL GRUPO */
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* GRUPO DE TARJETAS */
 .card-group {
   display: flex;
-  gap: 25px;
- 
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  padding: 40px;
 }
+
+/* TARJETA */
 .card {
-  width: 205px;
+  flex: 0 0 85%;
+  max-width: 85%;
   height: 400px;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  transition: 0.5s;
+  transition: transform 0.5s ease;
   cursor: pointer;
+  background-color: rgba(82, 81, 81, 0.323);
+  z-index: 1; /* Asegura que las tarjetas tengan una capa superior */
 }
+
+/* IMAGEN DE TARJETA */
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   pointer-events: none;
   transition: 0.5s;
+  z-index: 1; /* Asegura que la imagen esté debajo de la capa de información */
 }
 
-.card.layer {
+/* CAPA SUPERIOR */
+.card .layer {
   background: linear-gradient(to top, rgb(250, 249, 249), rgb(255, 255, 255));
   position: absolute;
   bottom: 0;
@@ -385,97 +414,136 @@ section .subtitulo {
   opacity: 0;
   transition: 0.3s;
 }
+
+/* INFORMACIÓN DE LA TARJETA */
 .card .info {
   position: absolute;
-  bottom:  -50%;
+  bottom: -50%;
   padding: 15px;
   opacity: 0;
-  transition: 0.5s bottom, 1.7s opacity;
-  color: rgb(255, 255, 255);
-
+  color: white;
   width: 100%;
   height: 50%;
-  background: rgb(0, 0, 0,.4);
-  opacity: 0;
-  transition: .5s;
+  background: rgba(0, 0, 0, 0.4);
+  transition: 0.5s ease-in-out;
+  z-index: 2; /* Asegura que la capa de información esté por encima de la imagen */
 }
+
+.card:hover .info {
+  bottom: 0;
+  opacity: 1;
+  z-index: 3; /* Asegura que la capa de información siempre esté encima de la imagen */
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* DESENFOQUE DE TARJETAS NO SELECCIONADAS */
+.card-group:hover > .card:not(:hover) {
+  filter: blur(5px);
+}
+
+/* TEXTO Y BOTÓN */
 .info p {
   font-size: 14px;
   margin-top: 3px;
   color: rgb(255, 255, 255);
-  text-shadow: 5px 5px 8px rgba(3, 3, 3, 0.756); 
-
+  text-shadow: 5px 5px 8px rgba(3, 3, 3, 0.756);
 }
+
 .info button {
   background: #14573b;
   border: none;
   padding: 8px 12px;
   font-weight: bold;
   border-radius: 8px;
-  margin-top: 8px ;
-}
-.card:hover,
-.card:hover img,
-.card:hover layer {
-  transition: scale(1.1);
-}
-.card:hover > .layer {
-  opacity: 1;
-}
-.card:hover > .info {
-  bottom:0;
-  opacity: 1;
-}
-.card-group:hover > .card:not(:hover) {
-  filter: blur(5px);
+  margin-top: 8px;
+  color: white;
+  cursor: pointer;
 }
 
-/* Estilos para el contenedor del carrusel */
-.carousel-container {
-    position: relative; /* Permite posicionar los botones de navegación */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    overflow: hidden; /* Oculta el contenido que se desborda */
-    display: flex; /* Utiliza flexbox para el diseño */
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra horizontalmente los elementos */
-}
-
-/* Estilos para el contenedor de las tarjetas */
-.carousel-wrapper {
-    width: 1200px; 
-}
-
-/* Estilos para el grupo de tarjetas */
-.card-group {
-    display: flex; /* Utiliza flexbox para organizar las tarjetas en fila */
-    transition: transform 0.5s ease-in-out; /* Agrega una transición suave al desplazamiento */
-    padding: 40.5px; /* Espacio para que se vean las cartas adyacentes */
-}
-
-/* Estilos para cada tarjeta */
-.card {
-    flex: 0 0 100%; /* Cada tarjeta ocupa el 100% del ancho del contenedor */
-    opacity: 10px rgba(82, 81, 81, 0.323);
-}
-
-
-/* Estilos para el contenedor de los botones de navegación */
+/* BOTONES DE NAVEGACIÓN */
 .carousel-buttons {
-    display: flex; /* Utiliza flexbox para organizar los botones */
-    justify-content: center; /* Centra horizontalmente los botones */
-    margin-top: 20px; /* Agrega un margen superior */
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-/* Estilos para los botones de navegación */
 .carousel-button {
-    background: #14573b; /* Establece el color de fondo */
-    border: none; /* Elimina el borde */
-    padding: 10px 15px; /* Agrega relleno */
-    font-weight: bold; /* Establece el texto en negrita */
-    border-radius: 8px; /* Agrega bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    margin: 0 10px; /* Agrega márgenes laterales */
+  background: #14573b;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: white;
 }
+
+/* ======================== */
+/* RESPONSIVE DESIGN       */
+/* ======================== */
+
+/* MEDIANAS (tablets o pantallas entre 600px - 1024px) */
+@media (max-width: 1024px) {
+  .card {
+    flex: 0 0 90%;
+    max-width: 90%;
+    height: 380px;
+  }
+
+  .titulo_lugares {
+    font-size: 40px;
+  }
+}
+
+/* PEQUEÑAS (celulares) */
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 360px;
+  }
+
+  .card-group {
+    padding:10px;
+    gap: 12px;
+  }
+
+  .titulo_lugares {
+    font-size: 36px;
+  }
+
+  .info p {
+    font-size: 12px;
+  }
+
+  .info button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .carousel-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  /* Asegurar que el hover funcione correctamente */
+  .card {
+    height: 380px; /* Ajustar la altura para que las tarjetas sean más grandes */
+    transition: transform 0.3s ease-in-out; /* Asegurar una transición suave */
+  }
+
+  /* Aseguramos que la capa de información no se salga del contenedor */
+  .card .info {
+    bottom: 0;
+  }
+}
+
+
+
+
 
 
 
@@ -553,31 +621,7 @@ button:hover {
   color: #fff;
 }
 
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 1024px) {
-  .carousel-wrapper {
-      width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
-  }
-}
-@media (max-width: 768px) {
-  .carousel-wrapper {
-      width: 80%; /* Ajusta el ancho para pantallas más pequeñas */
-  }
-  .titulo_lugares{
-    margin: 70px;
-    font-size: 40px;
-  }
-  .titulo_municipio{
-    font-size: 40px;
-  }
-  .infos h1{
-    font-size: 25px;
-    
-  }
-  .infos a{
-    font-size: 15px;
-  }
-}
+
 
 
 
@@ -628,7 +672,7 @@ footer {
     color: #373d20;                     /* Cambia a blanco al pasar el cursor */
 }
   
-@media screen and (max-width: 798px) {
+@media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;         /* Cambia la dirección de los elementos a columna */
         align-items: flex-start;        /* Alinea los elementos al inicio (izquierda) */
@@ -651,7 +695,7 @@ footer {
     }
 }
   
-@media screen and (max-width: 798px) {
+@media screen and (max-width: 768px) {
     .nav-links .menu,
     .nav-links .lupa,
     .nav-links .dropdown {
@@ -661,10 +705,10 @@ footer {
         display: none;               /* Oculta la última sección del footer */
     }
 }
-@media (max-width: 798px) {
+@media (max-width: 768px) {
     .nav-links {
         display: none;                /* Oculta todo el menú por defecto */
-        flex-direction: row;      /* Los ítems se apilan verticalmente */
+        flex-direction: column;      /* Los ítems se apilan verticalmente */
         background: #1c7c54;        /* Fondo verde */
         width: 100%;                 /* Ocupa todo el ancho */
         padding: 10px 0;             /* Espaciado vertical */

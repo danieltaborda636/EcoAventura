@@ -1,49 +1,42 @@
-// Selecciona los elementos del DOM
 const carouselWrapper = document.querySelector('.carousel-wrapper');
 const cardGroup = document.querySelector('.card-group');
-const cards = document.querySelectorAll('.card');
 const prevButton = document.querySelector('.carousel-button.prev');
 const nextButton = document.querySelector('.carousel-button.next');
 
-// Duplicar las primeras y últimas imágenes para el efecto de carrusel infinito
-const firstClone = cards[0].cloneNode(true);
-const lastClone = cards[cards.length - 1].cloneNode(true);
-
-// Agregar clones al DOM
+// Clonamos para efecto de bucle
+const firstClone = cardGroup.children[0].cloneNode(true);
+const lastClone = cardGroup.children[cardGroup.children.length - 1].cloneNode(true);
 cardGroup.appendChild(firstClone);
-cardGroup.insertBefore(lastClone, cards[0]);
+cardGroup.insertBefore(lastClone, cardGroup.firstChild);
 
-// Actualizar la lista de tarjetas con los nuevos clones
-const updatedCards = document.querySelectorAll('.card');
-let currentIndex = 1; // Iniciamos en la primera imagen "real"
-let cardWidth = carouselWrapper.offsetWidth; // Ancho dinámico
+let updatedCards = document.querySelectorAll('.card');
+let currentIndex = 1;
 
-// Posicionar el carrusel en la primera imagen real
+let updateCardWidth = () => {
+    const card = updatedCards[0];
+    const gap = 20; // mismo gap que en CSS
+    const cardWidth = card.offsetWidth + gap;
+    return cardWidth;
+};
+
+let cardWidth = updateCardWidth();
+
+// Posición inicial
 cardGroup.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 
-// Función para actualizar el carrusel con efecto de transición
+// Función para mover el carrusel
 function updateCarousel(transition = true) {
-    if (transition) {
-        cardGroup.style.transition = 'transform 0.5s ease-in-out';
-    } else {
-        cardGroup.style.transition = 'none';
-    }
+    cardWidth = updateCardWidth();
+    cardGroup.style.transition = transition ? 'transform 0.5s ease-in-out' : 'none';
     cardGroup.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 }
 
-// Función para actualizar el ancho dinámicamente
-function updateCardWidth() {
-    cardWidth = carouselWrapper.offsetWidth;
-    updateCarousel(false);
-}
-
-// Evento para el botón "Siguiente"
+// Botón siguiente
 nextButton.addEventListener('click', () => {
     if (currentIndex >= updatedCards.length - 1) return;
     currentIndex++;
     updateCarousel();
 
-    // Si llega a la última imagen (clone), salta instantáneamente a la primera imagen real
     setTimeout(() => {
         if (currentIndex === updatedCards.length - 1) {
             currentIndex = 1;
@@ -52,13 +45,12 @@ nextButton.addEventListener('click', () => {
     }, 500);
 });
 
-// Evento para el botón "Anterior"
+// Botón anterior
 prevButton.addEventListener('click', () => {
     if (currentIndex <= 0) return;
     currentIndex--;
     updateCarousel();
 
-    // Si llega a la primera imagen (clone), salta instantáneamente a la última imagen real
     setTimeout(() => {
         if (currentIndex === 0) {
             currentIndex = updatedCards.length - 2;
@@ -66,6 +58,16 @@ prevButton.addEventListener('click', () => {
         }
     }, 500);
 });
+
+// Ajustar al redimensionar
+window.addEventListener('resize', () => {
+    cardWidth = updateCardWidth();
+    updateCarousel(false);
+});
+
+
+
+
 
 // Actualiza el ancho de la tarjeta si la ventana cambia de tamaño
 window.addEventListener('resize', updateCardWidth);
