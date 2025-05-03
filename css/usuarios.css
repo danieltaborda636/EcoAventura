@@ -128,4 +128,74 @@ body {
     color: #A4B65B; /* Cambia a verde al pasar el cursor */
   }
   
+  img {
+    width: 60px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* ✅ Media Queries para Responsividad */
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+    }
+
+    .sidebar .user-icon {
+      display: none;
+    }
+
+    .sidebar ul {
+      display: flex;
+      width: 100%;
+    }
+
+    .sidebar ul li {
+      flex: 1;
+      text-align: center;
+      border-bottom: none;
+      border-right: 1px solid #ccc;
+    }
+
+    .sidebar ul li:last-child {
+      border-right: none;
+    }
+
+    .content {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .btn-group button {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    img {
+      width: 40px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      max-width: 100%;
+    }
+  }
+
+
   

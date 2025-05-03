@@ -57,11 +57,11 @@
         <p>Usuario</p>
       </div>
       <ul>
-        <li class="active" onclick="mostrarSeccion('cuenta')">Cuenta</li>
-        <li onclick="mostrarSeccion('contrasena')">Contraseña</li>
-        <li onclick="mostrarSeccion('seguridad')">Seguridad</li>
-        <li onclick="mostrarSeccion('favoritos')">Mis Favoritos</li>
-        <li onclick="mostrarSeccion('operadores')">Operadores</li>
+        <li class="active" data-section="cuenta" onclick="mostrarSeccion('cuenta')">Cuenta</li>
+        <li data-section="contrasena" onclick="mostrarSeccion('contrasena')">Contraseña</li>
+        <li data-section="seguridad" onclick="mostrarSeccion('seguridad')">Seguridad</li>
+        <li data-section="favoritos" onclick="mostrarSeccion('favoritos')">Mis Favoritos</li>
+        <li data-section="operadores" onclick="mostrarSeccion('operadores')">Operadores</li>
       </ul>
     </div>
 
@@ -85,10 +85,19 @@
           <label>Teléfono</label>
           <input type="text" value="+57323458703" />
         </div>
-        <div class="form-group">
-          <label>País</label>
-          <img src="https://flagcdn.com/w40/co.png" alt="Colombia" />
+        <label for="flag-select">Selecciona un país:</label>
+        <select id="flag-select">
+          <option value="co">Colombia</option>
+          <option value="us">Estados Unidos</option>
+          <option value="fr">Francia</option>
+          <option value="jp">Japón</option>
+          <option value="br">Brasil</option>
+        </select>
+      
+        <div>
+          <img id="flag" src="https://flagcdn.com/w80/co.png" alt="Bandera" />
         </div>
+      
         <div class="btn-group">
           <button>Actualizar</button>
           <button>Cancelar</button>

@@ -1,17 +1,16 @@
 function mostrarSeccion(id) {
-    const secciones = ['cuenta', 'contrasena', 'seguridad', 'favoritos', 'operadores'];
-    secciones.forEach(sec => {
-      document.getElementById(sec).style.display = (sec === id) ? 'block' : 'none';
-    });
+  const secciones = ['cuenta', 'contrasena', 'seguridad', 'favoritos', 'operadores'];
 
-    document.querySelectorAll('.sidebar ul li').forEach(li => li.classList.remove('active'));
-    const botones = document.querySelectorAll('.sidebar ul li');
-    botones.forEach(btn => {
-      if (btn.textContent.toLowerCase().includes(id)) {
-        btn.classList.add('active');
-      }
-    });
-  }
+  // Mostrar la sección seleccionada
+  secciones.forEach(sec => {
+    document.getElementById(sec).style.display = (sec === id) ? 'block' : 'none';
+  });
+
+  // Cambiar clase activa en el menú
+  document.querySelectorAll('.sidebar ul li').forEach(li => {
+    li.classList.toggle('active', li.dataset.section === id);
+  });
+}
 
   function mostrarVistaPrevia(input) {
     const preview = document.getElementById('preview-img');
@@ -33,3 +32,12 @@ function mostrarSeccion(id) {
   function toggleFavorite(element) {
     element.classList.toggle("active");
   }
+
+  const flagSelect = document.getElementById('flag-select');
+  const flagImage = document.getElementById('flag');
+
+  flagSelect.addEventListener('change', () => {
+    const countryCode = flagSelect.value;
+    flagImage.src = `https://flagcdn.com/w80/${countryCode}.png`;
+    flagImage.alt = `Bandera de ${flagSelect.options[flagSelect.selectedIndex].text}`;
+  });
